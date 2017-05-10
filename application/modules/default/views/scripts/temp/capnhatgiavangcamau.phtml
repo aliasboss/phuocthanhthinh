@@ -1,0 +1,194 @@
+<style>
+
+    
+</style>
+<style type="text/css">
+    .table_gia{
+        border: 2px solid #000;
+        border-collapse: collapse;
+        padding: 2px;
+    }
+    .table_gia td{
+        padding: 5px;
+    }
+    .table_gia th{
+        color: #00f;
+    }
+    .loai_vang{
+        color: #f00;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+<form action="<?= NHK_URL::getLinkControllerDefault('temp') ?>/capnhat1" method="post">    
+    <table border="1" width="500">
+        <tr>
+            <td style="font-size: 16px;font-weight: bold;color: #00F">Giá Bán v999:</td>
+            <td><input type="text" id="txtGiaVang999" style="height: 80px; font-size: 34px;width: 130px; color: #F00;font-weight: bold;" name="gia_ban_v999" value="<?=$this->data['v999']['b']?>" </td>
+            <td><input type="submit" style="height: 60px;font-size: 20px;font-weight: bold;" value="Cập Nhật" /> </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <dd>
+            <dl>Nhập giá bán của vàng 999 để cập nhật giá.</dl>
+                <dl>Sau khi nhập giá hãy nhấn phím "Tab". Bảng giá phía dưới sẽ tự động được cập nhật.</dl>
+                <dl>Nếu đã thấy đúng thì hãy nhấn Nút "Cập Nhật" bảng giá vàng sẽ cập nhật.</dl>
+                <dl>Bạn có thể thay đổi giá trực tiếp trên bảng giá nếu thấy cần thiết. Sau đó hãy nhấn nút "Cập Nhật" phía dưới bảng giá.</dl>
+            </dd>                
+            </td>
+        </tr>
+    </table>   
+    
+</form>
+<form action="<?= NHK_URL::getLinkControllerDefault('temp') ?>/capnhat2" method="post">
+    <table class="table_gia" border="1">
+    <thead>
+        <tr>
+            <th>Loại</th>
+            <th>Chất Lượng ‰</th>
+            <th>Mua Vào</th>
+            <th>Bán Ra</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Vàng 24K</th>
+            <td class="loai_vang">999</td>
+            <td><input type="text" id="txt_999_m" name="data[v999][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v999']['m']?>"  </td>
+            <td><input type="text" id="txt_999_b" name="data[v999][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v999']['b']?>"  </td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">980</td>
+            <td><input type="text" id="txt_980_m" name="data[v980][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v980']['m']?>"  </td>
+            <td><input type="text" id="txt_980_b" name="data[v980][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v980']['b']?>"  </td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">960</td>
+            <td><input type="text" id="txt_960_m" name="data[v960][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v960']['m']?>"  </td>
+            <td><input type="text" id="txt_960_b" name="data[v960][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v960']['b']?>"  </td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">750</td>
+            <td><input type="text" id="txt_750_m" name="data[v750][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v750']['m']?>"  </td>
+            <td><input type="text" id="txt_750_b" name="data[v750][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v750']['b']?>"  </td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">680</td>
+            <td><input type="text" id="txt_680_m" name="data[v680][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v680']['m']?>"  </td>
+            <td><input type="text" id="txt_680_b" name="data[v680][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v680']['b']?>"  </td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">610</td>
+            <td><input type="text" id="txt_610_m" name="data[v610][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v610']['m']?>"  </td>
+            <td><input type="text" id="txt_610_b" name="data[v610][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v610']['b']?>"  </td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">585</td>
+            <td><input type="text" id="txt_585_m" name="data[v585][m]" style="width:70px; font-size: 16px;" value="<?=$this->data['v585']['m']?>"  </td>
+            <td><input type="text" id="txt_585_b" name="data[v585][b]" style="width:70px; font-size: 16px;" value="<?=$this->data['v585']['b']?>"  </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="submit" style="height: 60px;font-size: 20px;font-weight: bold;" value="Cập Nhật" />
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+<br />
+
+</form>
+  
+
+
+  <script src="<?php echo NHK_URL::getLinkPublic("js") ?>/jquery-1.8.2.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  var url = '<?= NHK_URL::getLinkControllerDefault('temp') ?>';
+ 
+  var urlIframe = (window.location !== window.parent.location)? document.referrer: document.location.hostname;
+  var urlCheck1 = "http://phuocthanhthinh.com.vn/";
+  var urlCheck2 = "http://www.phuocthanhthinh.com.vn/";
+  var urlCheck3 = "http://hoikimhoancamau.com/";
+  var urlCheck4 = "http://www.hoikimhoancamau.com/";
+  
+  $(document).ready(function(){
+//     init();
+//                    auto_get_value();
+//    if(
+//              urlIframe.localeCompare(urlCheck1) == 0 ||
+//              urlIframe.localeCompare(urlCheck2) == 0 ||
+//              urlIframe.localeCompare(urlCheck3) == 0 ||
+//              urlIframe.localeCompare(urlCheck4) == 0
+//                ){
+//                     init();
+//                    auto_get_value();
+//                } else{
+//                    window.location= "http://phuocthanhthinh.com.vn/contact/";
+//                }
+//   
+//    
+//    
+
+//    $("[name='gia_ban_v999']").change(function(){
+//        changeGia();
+//        
+//    });
+    $("#txtGiaVang999").change(function(){
+        changeGia();
+    });
+    $("#txtGiaVang999").focusout(function(){
+        changeGia();
+    });
+
+  });
+  
+  function changeGia(){     
+      var gia_999 = parseInt($("#txtGiaVang999").val());
+        var gia_980 = gia_999 - 60;
+        var gia_960 = gia_999 - 80;
+        var gia_750 = Math.round((gia_999*0.075)+15)*10;
+        var gia_680 = Math.round((gia_999*0.068)+15)*10;
+        var gia_610 = Math.round((gia_999*0.061)+20)*10;
+        var gia_585 = Math.round((gia_999*0.0585)+20)*10;
+        
+        $("#txt_999_m").val(gia_999-60);
+        $("#txt_999_b").val(gia_999);
+        
+        //$("[name='data[v999][m]").val(gia_999-60);
+        //$("[name='data[v999][b]").val(gia_999);
+        
+        $("#txt_980_m").val(gia_980-60);
+        $("#txt_980_b").val(gia_980);
+        
+        $("#txt_960_m").val(gia_960-120);
+        $("#txt_960_b").val(gia_960);
+        
+        $("#txt_750_m").val(gia_750-200);
+        $("#txt_750_b").val(gia_750);
+        
+        $("#txt_680_m").val(gia_680-200);
+        $("#txt_680_b").val(gia_680);
+        
+        $("#txt_610_m").val(gia_610-240);
+        $("#txt_610_b").val(gia_610);
+        
+        $("#txt_585_m").val(gia_585-240);
+        $("#txt_585_b").val(gia_585);
+  };
+  
+  
+  Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+};
+</script>
+
+    

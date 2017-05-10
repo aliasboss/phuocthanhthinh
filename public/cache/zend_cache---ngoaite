@@ -1,0 +1,328 @@
+s:13433:"<table width="100%" cellspacing="1" cellpadding="0"><tbody>
+<tr>
+<td style="text-align:center">
+		<b class="caption">GIÁ USD THAM CHIẾU</b>
+	</td>
+</tr>
+<tr>
+<td>
+		<table width="100%">
+<tr>
+<td class="style31">Cập Nhật</td>
+				<td colspan="3" class="style31">
+					24/04/2017				</td>
+			</tr>
+<tr class="header">
+<td></td>
+				<th>Mua</th>
+				<th>Bán</th>
+				<th>Giờ</th>
+			</tr>
+<tr class="row1">
+<th style="padding:0">Vietcombank</th>
+				<td style="padding:0 2px" class="price1"> 22,705</td>
+				<td style="padding:0 2px" class="price1"> 22,775</td>
+				<td style="padding:0">20:00:00</td>
+			</tr>
+<tr class="row2">
+<th style="padding:0">Eximbank</th>
+				<td style="padding:0 2px" class="price1">22,670</td>
+				<td style="padding:0 2px" class="price1">22,770</td>
+				<td style="padding:0">16:34:04</td>
+			</tr>
+</table>
+</td>
+</tr>
+</tbody></table><table width="100%" cellspacing="1" cellpadding="0" class="currency_table"><tbody>
+<tr>
+<td colspan="6" class="style31">
+			Cập nhật: 24/04/2017 21:31:30		</td>
+	</tr>
+<tr class="header" style="background-color: #e5c347">
+<th>Tên</th>
+  <th width="20%">Mua</th>
+  <th width="20%">Bán</th>
+  <th width="20%">TG</th>
+  <th>%</th>
+  <th>C/L</th>
+</tr>
+<tr title="Tiền Úc" class="row1">
+<th>AUD</th>
+		  			   
+		  <td class="price1" style="color:green">17,188</td>
+		  <td class="price2" style="color:green">17,248</td>
+		  <td class="price1" style="color:green">0.7563</td>
+		  <td class="price2" style="color:green">0.46</td>
+		  <td class="price3">-6</td>
+		</tr>
+<tr title="Tiền Canada" class="row2">
+<th>CAD</th>
+		  			   
+		  <td class="price1" style="color:green">16,991</td>
+		  <td class="price2" style="color:green">17,061</td>
+		  <td class="price1" style="color:green">0.7416</td>
+		  <td class="price2" style="color:green">0.47</td>
+		  <td class="price3">131</td>
+		</tr>
+<tr title="Tiền Thụy Sĩ" class="row1">
+<th>CHF</th>
+		  			   
+		  <td class="price1" style="color:green">22,779</td>
+		  <td class="price2" style="color:green">22,849</td>
+		  <td class="price1" style="color:green">1.0054</td>
+		  <td class="price2" style="color:green">0.24</td>
+		  <td class="price3">-78</td>
+		</tr>
+<tr title="Tiền Euro" class="row2">
+<td style="padding:0"><button class="btn-bg" onclick="showCalendarAlert('eur')" style="color:blue;font-weight:bold">EUR</button></td>
+		  			   
+		  <td class="price1" style="color:green">24,610</td>
+		  <td class="price2" style="color:green">24,680</td>
+		  <td class="price1" style="color:green">1.0862</td>
+		  <td class="price2" style="color:green">1.35</td>
+		  <td class="price3">-84</td>
+		</tr>
+<tr title="Bảng Anh" class="row1">
+<td style="padding:0"><button class="btn-bg" onclick="showCalendarAlert('gbp')" style="color:blue;font-weight:bold">GBP</button></td>
+		  			   
+		  <td class="price1" style="color:red">28,992</td>
+		  <td class="price2" style="color:red">29,102</td>
+		  <td class="price1" style="color:red">1.2782</td>
+		  <td class="price2" style="color:red">-0.17</td>
+		  <td class="price3">-68</td>
+		</tr>
+<tr title="Tiền Yên Nhật" class="row2">
+<td style="padding:0"><button class="btn-bg" onclick="showCalendarAlert('jpy')" style="color:blue;font-weight:bold">JPY</button></td>
+		  			   
+		  <td class="price1" style="color:red">206.77</td>
+		  <td class="price2" style="color:red">207.57</td>
+		  <td class="price1" style="color:red">0.0091</td>
+		  <td class="price2" style="color:red">-0.56</td>
+		  <td class="price3">0.11</td>
+		</tr>
+<tr title="Tiền New Zealand" class="row1">
+<th>NZD</th>
+		  			   
+		  <td class="price1" style="color:green">16,118</td>
+		  <td class="price2" style="color:green">16,368</td>
+		  <td class="price1" style="color:green">0.7025</td>
+		  <td class="price2" style="color:green">0.24</td>
+		  <td class="price3">147</td>
+		</tr>
+<tr class="row1" style="background-color:#FAECCD;color:blue;text-align:right;font-weight:bold;">
+<td style="padding:0"><button class="btn-bg" onclick="showCalendarAlert('usd')" style="color:blue;font-weight:bold">K18</button></td>
+		  			  	
+		  	
+		  <td style="font-weight:bold;color:blue">22,730</td>
+		  <td style="font-weight:bold;color:blue">22,755</td>
+		  <td style="font-weight:bold;color:blue">1.0000</td>
+		  <td style="font-weight:bold;color:blue">A/U</td>
+		  <td style="font-weight:bold;color:blue">N/A</td>
+		</tr>
+<tr title="Tiền Hồng Kông" class="row2">
+<th>HKD</th>
+		  			   
+		  <td class="price1" style="color:red">2,910</td>
+		  <td class="price2" style="color:red">2,950</td>
+		  <td class="price1" style="color:red">0.1286</td>
+		  <td class="price2" style="color:red">-0.08</td>
+		  <td class="price3">-13</td>
+		</tr>
+<tr title="Tiền Singapore" class="row1">
+<th>SGD</th>
+		  			   
+		  <td class="price1" style="color:green">16,280</td>
+		  <td class="price2" style="color:green">16,340</td>
+		  <td class="price1" style="color:green">0.7180</td>
+		  <td class="price2" style="color:green">0.28</td>
+		  <td class="price3">-44</td>
+		</tr>
+<tr title="Tiền Bạt Thái Lan" class="row2">
+<th>THB</th>
+		  			   
+		  <td class="price1" style="color:#004080">664.26</td>
+		  <td class="price2" style="color:#004080">669.26</td>
+		  <td class="price1" style="color:#004080">0.0292</td>
+		  <td class="price2" style="color:#004080">0</td>
+		  <td class="price3">1.53</td>
+		</tr>
+<tr title="Tiền Trung Quốc" class="row1">
+<th>CNY</th>
+		  			   
+		  <td class="price1" style="color:#004080">3,260</td>
+		  <td class="price2" style="color:#004080">3,300</td>
+		  <td class="price1" style="color:#004080">0.1453</td>
+		  <td class="price2" style="color:#004080">0</td>
+		  <td class="price3">-42</td>
+		</tr>
+<tr title="Tiền Won Hàn Quốc" class="row2">
+<th>KRW</th>
+		  			   
+		  <td class="price1" style="color:#004080">20.10</td>
+		  <td class="price2" style="color:#004080">20.50</td>
+		  <td class="price1" style="color:#004080">0.0009</td>
+		  <td class="price2" style="color:#004080">0</td>
+		  <td class="price3">0.09</td>
+		</tr>
+<tr title="Tiền Rinhgit Malaixia" class="row1">
+<th>MYR</th>
+		  			   
+		  <td class="price1" style="color:#004080">5,118</td>
+		  <td class="price2" style="color:#004080">5,168</td>
+		  <td class="price1" style="color:#004080">0.2272</td>
+		  <td class="price2" style="color:#004080">0</td>
+		  <td class="price3">-48</td>
+		</tr>
+<tr title="Tiền Đài Loan" class="row2">
+<th>TWD</th>
+		  			   
+		  <td class="price1" style="color:green">752.23</td>
+		  <td class="price2" style="color:green">757.23</td>
+		  <td class="price1" style="color:green">0.0331</td>
+		  <td class="price2" style="color:green">0.61</td>
+		  <td class="price3">-0.3</td>
+		</tr>
+<tr title="Tiền Brunei" class="row1">
+<th>BND</th>
+		  			   
+		  <td class="price1" style="color:green">15,827</td>
+		  <td class="price2" style="color:green">16,177</td>
+		  <td class="price1" style="color:green">0.7181</td>
+		  <td class="price2" style="color:green">0.33</td>
+		  <td class="price3">-500</td>
+		</tr>
+<tr title="Tiền Rupiah Indonesia" class="row2">
+<th>IDR</th>
+		  			   
+		  <td class="price1" style="color:#004080">1.65</td>
+		  <td class="price2" style="color:#004080">2.05</td>
+		  <td class="price1" style="color:#004080">0.0001</td>
+		  <td class="price2" style="color:#004080">0</td>
+		  <td class="price3">-0.17</td>
+		</tr>
+<tr class="row2"><td colspan="100%" style="color:#c00000;font-weight:bold;">Đồng Tiền Bắc Âu:</td></tr>
+<tr title="Tiền Thụy Điển" class="row2">
+<th>SEK</th>
+		  			   
+		  <td class="price1" style="color:green">2,214</td>
+		  <td class="price2" style="color:green">2,564</td>
+		  <td class="price1" style="color:green">0.1131</td>
+		  <td class="price2" style="color:green">1.9</td>
+		  <td class="price3">-356.9</td>
+		</tr>
+<tr title="Tiền Đan Mạch" class="row1">
+<th>DKK</th>
+		  			   
+		  <td class="price1" style="color:green">2,923</td>
+		  <td class="price2" style="color:green">3,273</td>
+		  <td class="price1" style="color:green">0.1460</td>
+		  <td class="price2" style="color:green">1.32</td>
+		  <td class="price3">-396.8</td>
+		</tr>
+<tr title="Tiền Na Uy" class="row2">
+<th>NOK</th>
+		  			   
+		  <td class="price1" style="color:green">2,303</td>
+		  <td class="price2" style="color:green">2,653</td>
+		  <td class="price1" style="color:green">0.1170</td>
+		  <td class="price2" style="color:green">1.39</td>
+		  <td class="price3">-355.8</td>
+		</tr>
+<tr class="row2">
+<td class="note1" colspan="6" style="background-color:#FAECCD;">
+  	
+	  	<i>C/L: Chênh lệch. TG: Giá thế giới</i> <br><span style="color:blue;">Giá chỉ mang tính tham khảo.</span>
+
+	  </td>
+</tr>
+<tr class="row2">
+<td colspan="6" align="center" style="position:relative;">
+
+	<div id="divCBtn" style="border-radius:10px;padding:15px 10px 25px;text-align:center;margin:5px 0;background:#ffcc66;">
+
+		<div style="position:absolute;top:0px;right:0;height:22px;width:100%;">
+			<button id="button_hidden_help" class="btn-bg" onclick="showHelp()" style="top:8px;right:5px;position:absolute;color:blue;font-weight:bold">Giúp</button>
+		</div>
+
+		<div style="position:relative;" class="action ">
+			<span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px">
+			<span class="nt-button-l"> </span>
+			<span class="nt-button-r"> </span>
+				<a class="nt-button btn-success direct" target="_blank" href="http://news.taiem.vn/news/latest?authen=true" style="width:140px; padding:0px 10px !important;">Chiến Lược Đầu Tư</a>
+			</span>
+			<img style="position:absolute;right:0;top:5px;" class="icon-new" src="/images/new_blink.gif">
+</div>
+
+		<span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button btn-success direct" target="_blank" href="http://news.taiem.vn/news/calendar" style="width:140px; padding:0px 10px !important">Lịch Kinh Tế</a>
+		</span>
+		
+		<span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button btn-success direct" target="_blank" href="/site/currencyConvert?authen=true" style="width:140px; padding:0px 10px !important">Chuyển Đổi Tiền</a>
+		</span>
+
+		<br><span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button btn-success direct" target="_blank" href="/site/guidepromo.html" style="width:140px; padding:0px 10px !important">Báo Giá Tự Động</a>
+		</span>
+
+		<br><span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button btn-success direct" target="_blank" href="/site/guidepromo.html" style="width:140px; padding:0px 10px !important">Cảnh Báo Giá</a>
+		</span>
+
+		<br><span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button btn-success direct" target="_blank" href="/site/currencyViewHistory.html" style="width:140px; padding:0px 10px !important">Xem Nhật Ký</a>
+		</span>
+
+		<br><span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button btn-success direct" target="_blank" href="/site/autoSave.html" style="width:140px; padding:0px 10px !important">Lưu Tỷ Giá Tự Động</a>
+		</span>		
+
+		<br><div style="position:relative;" class="action ">
+			<span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+			<span class="nt-button-l"> </span>
+			<span class="nt-button-r"> </span>
+				<a class="nt-button btn-success direct" target="_blank" href="http://news.taiem.vn/news/market" style="width:140px; padding:0px 10px !important">Tin Tức Tài Chính</a>
+			</span>
+			<img style="position:absolute;right:0;top:5px;" class="icon-new" src="/images/new_blink.gif">
+</div>
+
+		<div style="position:relative;" class="action hotnews">
+			<span class="nt-button-wrapper nt-button-mobi btn-success" style="width:160px;margin-top:0px;">
+			<span class="nt-button-l"> </span>
+			<span class="nt-button-r"> </span>
+				<a class="nt-button btn-success direct" target="_blank" href="http://tonghop.taiem.vn/site/total" style="width:140px; padding:0px 10px !important">Tổng Hợp Thu Chi</a>
+			</span>
+			<img style="position:absolute;right:0;top:5px;" class="icon-new" src="/images/new_blink.gif">
+</div>
+	</div>
+
+	<div style="position:absolute;bottom:0px;height:22px;width:100%;">
+		<button id="button_hidden_cbtn" class="btn-bg" onclick="hideCBtn()" style="bottom:8px;right:5px;position:absolute;color:#c00000;font-weight:bold">Ẩn</button>
+		<script>
+			
+		</script>
+</div>
+	</td>
+</tr>
+<tr class="row1">
+<td class="note1" colspan="6" style="padding:0px;">			
+		<span class="nt-button-wrapper nt-button-mobi nt-button-logout" style="width:120px">
+		<span class="nt-button-l"> </span>
+		<span class="nt-button-r"> </span>
+			<a class="nt-button direct" onclick="currencylogout();" href="javascript:void(0)">Thoát</a>
+		</span>
+	</td>
+</tr>
+</tbody></table>";

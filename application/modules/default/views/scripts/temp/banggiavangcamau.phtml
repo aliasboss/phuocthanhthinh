@@ -1,0 +1,229 @@
+<style>
+
+    
+</style>
+<style type="text/css">
+    .table_gia{
+        border: 2px solid #000;
+        border-collapse: collapse;
+        padding: 2px;
+    }
+    .table_gia td{
+        padding: 5px;
+    }
+    .table_gia th{
+        color: #00f;
+    }
+    .loai_vang{
+        color: #f00;
+        font-weight: bold;
+        text-align: center;
+    }
+    .title1{
+        color: #00F;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .title2{
+        color: #F00;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .border1{
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        border: 5px #f00 solid;
+        padding: 5px;
+    }
+    .banggiavang{
+        border: 1px #f00 solid;
+        padding: 5px;
+        text-align: center;
+        margin: 5px;
+    }
+    .content1{
+        color:#026702;
+        text-align: center;
+    }
+    .table_gia{
+        border: 1px #00f solid;
+        width: 440px;    
+    }
+    .table_gia td{
+        padding: 5px;
+        font-weight: bold;
+        color: #F00;
+        font-size: 19px;
+    }
+    .table_gia th{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .vang18k{
+        border-top: 1px #F00 dashed;
+    }
+    
+</style>
+
+<div style="width:485px; font-family: Arial;">
+    <div class="title1">
+        HỘI MỸ NGHỆ KIM HOÀN TỈNH CÀ MAU
+    </div>
+    <div style="color:#F00; text-align: center; margin-bottom: 10px">
+        KHÁCH HÀNG LƯU Ý: Những món hàng mà Quý khách mua không đóng dấu chất lượng phần trăm (%) trên sản phẩm và bán không đúng theo bảng giá, đều không đảm bảo chất lượng.
+    </div>
+    <div class="border1">
+        <div class="title2">
+            GIÁ VÀNG
+        </div>
+        <div id="time_update" class="content1">
+            Cập nhật vào lúc <?=date("H:i:s d/m/Y")?>
+        </div>
+        <div class="content1">
+            Đơn vị tính : <span style="color:#F00">Đồng/Chỉ</span>
+        </div>
+        <div class="banggiavang">
+            <?php if($this->data != null){ ?>
+        <table class="table_gia" border="1">
+    <thead>
+        <tr>
+            <th>Loại</th>
+            <th>Chất Lượng ‰</th>
+            <th>Mua Vào</th>
+            <th>Bán Ra</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Vàng 24K</th>
+            <td class="loai_vang">999</td>
+            <td id='v999_m'><?=$this->data['v999']['m']?></td>
+            <td id='v999_b'><?=$this->data['v999']['b']?></td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">980</td>
+            <td id='v980_m'><?=$this->data['v980']['m']?></td>
+            <td id='v980_b'><?=$this->data['v980']['b']?></td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">960</td>
+            <td id='v960_m'><?=$this->data['v960']['m']?></td>
+            <td id='v960_b'><?=$this->data['v960']['b']?></td>
+        </tr>
+        <tr class="vang18k">
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">750</td>
+            <td id='v750_m'><?=$this->data['v750']['m']?></td>
+            <td id='v750_b'><?=$this->data['v750']['b']?></td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">680</td>
+            <td id='v680_m'><?=$this->data['v680']['m']?></td>
+            <td id='v680_b'><?=$this->data['v680']['b']?></td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">610</td>
+            <td id='v610_m'><?=$this->data['v610']['m']?></td>
+            <td id='v610_b'><?=$this->data['v610']['b']?></td>
+        </tr>
+        <tr>
+            <th>Vàng Nữ Trang</th>
+            <td class="loai_vang">585</td>
+            <td id='v585_m'><?=$this->data['v585']['m']?></td>
+            <td id='v585_b'><?=$this->data['v585']['b']?></td>
+        </tr>
+       
+    </tbody>
+</table>
+            <?php }else{ ?>
+            
+            <div>Đã có lỗi trong quá trình cập nhật giá. Vui lòng thực hiện lại thao tác cập nhật giá.</div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+  
+
+
+  <script src="<?php echo NHK_URL::getLinkPublic("js") ?>/jquery-1.8.2.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  var url = '<?= NHK_URL::getLinkControllerDefault('temp') ?>';
+ 
+  var urlIframe = (window.location !== window.parent.location)? document.referrer: document.location.hostname;
+  var urlCheck1 = "http://phuocthanhthinh.com.vn/";
+  var urlCheck2 = "http://www.phuocthanhthinh.com.vn/";
+  var urlCheck3 = "http://hoikimhoancamau.com/";
+  var urlCheck4 = "http://www.hoikimhoancamau.com/";
+  
+  $(document).ready(function(){
+//     init();
+//                    auto_get_value();
+//    if(
+//              urlIframe.localeCompare(urlCheck1) == 0 ||
+//              urlIframe.localeCompare(urlCheck2) == 0 ||
+//              urlIframe.localeCompare(urlCheck3) == 0 ||
+//              urlIframe.localeCompare(urlCheck4) == 0
+//                ){
+//                     init();
+//                    auto_get_value();
+//                } else{
+//                    window.location= "http://phuocthanhthinh.com.vn/contact/";
+//                }
+
+    setInterval(checkGia,30000);
+    //setInterval(checkGia,3000);
+
+  });
+  
+  function checkGia(){
+      $.post(url + '/banggiavangcamau', {}, function (res) {
+          var data = JSON.parse(res);
+          $("#v999_m").html(data['v999']['m']);
+          $("#v999_b").html(data['v999']['b']);
+          
+          $("#v980_m").html(data['v980']['m']);
+          $("#v980_b").html(data['v980']['b']);
+          
+          $("#v960_m").html(data['v960']['m']);
+          $("#v960_b").html(data['v960']['b']);
+          
+          $("#v750_m").html(data['v750']['m']);
+          $("#v750_b").html(data['v750']['b']);
+          
+          $("#v680_m").html(data['v680']['m']);
+          $("#v680_b").html(data['v680']['b']);
+          
+          $("#v610_m").html(data['v610']['m']);
+          $("#v610_b").html(data['v610']['b']);
+          
+          $("#v585_m").html(data['v585']['m']);
+          $("#v585_b").html(data['v585']['b']);
+          
+          var currentDate = new Date();
+        $("#time_update").html("Cập nhật vào lúc: "+currentDate.toLocaleString());
+      });
+  }
+  
+  
+  Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+};
+</script>
+
+    

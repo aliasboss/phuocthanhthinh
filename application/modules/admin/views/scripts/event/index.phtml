@@ -1,0 +1,235 @@
+<?php
+$properties = $this->properties;
+$perpage = Zend_Registry::get('perpage');
+$section = $this->section;
+$link = $this->link;
+?>
+<link href="<?php echo NHK_URL::getLinkPublic("css") ?>/list.css" media="screen" rel="stylesheet" type="text/css" />
+<!--header-->
+<div class="page-header">
+  <div class="title">
+      <h1><?php echo NHK_Properties::get("title", $section, $properties); ?></h1>
+  </div>
+  <div class="button">
+      <div class="btn-group">
+        <a class="btn dropdown-toggle btn-danger" data-toggle="dropdown" href="#">
+          Delete
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a id="dropdown_delete_select" href="javascript:">Delete Select</a></li>
+          <li><a id="dropdown_delete_all" href="javascript:">Delete All</a></li>
+        </ul>
+      </div>
+    <!--<button class="btn btn-warning" type="button" id="btn_add"> <i class="icon-plus-sign icon-white"></i><?php echo NHK_Properties::get("btn_add", $section, $properties); ?></button>-->
+    <a class="btn btn-warning" href="<?= NHK_URL::getLinkControllerAdmin($link) ?>/add" > <i class="icon-plus-sign icon-white"></i><?php echo NHK_Properties::get("btn_add", $section, $properties); ?></a>
+    <a class="btn btn-inverse" href="<?= NHK_URL::getLinkControllerAdmin($link) ?>/phuocthanhthinh" > Lấy tin Phước Thành Thịnh</a>
+  </div>
+  <div class="row"></div>
+</div>
+<!--/header-->
+
+<!--search-->
+
+<div class="row">
+  <div class="box-search" style="margin-left: 20px;">
+<!--    <div class="form-inline">
+      
+        <span>Username:</span>
+        <input key="username" type="text" class="params_search" placeholder="<?php echo NHK_Properties::get("title_column_username", $section, $properties); ?>">
+      
+    </div>-->
+<div class="row" style="margin-left: 20px;">
+  <div class="span2" style="text-align: right;">Tiêu đề:</div>
+  <div class="span3"><input key="title" type="text" class="params_search input_search" placeholder="<?php echo NHK_Properties::get("title_column_title", $section, $properties); ?>"></div>
+  
+  <div class="span2" style="text-align: right;">Ngày:</div>
+  <div class="span3"><input id="search_date" key="created_at" type="text" class="params_search" placeholder="<?php echo NHK_Properties::get("title_column_time_post", $section, $properties); ?>"></div>
+    
+</div>
+    <div class="button-search">
+      <button id="btn_search" class="btn" type="button">Search</button>
+    </div>
+    
+    
+    <div class="clearfix"></div>
+  </div>
+
+</div>
+
+<!--/search-->
+
+
+
+<div style="display:none; text-align: center;">
+  <img id="loading" src="<?php echo NHK_URL::getLinkPublic('img') . '/ajax-loader.gif' ?>" alt="loading"  />
+</div>
+
+<!--table list-->
+<!--<div style="display:none;" id="content">-->
+<div id="contentss" style="position: relative;">
+  <style type="text/css">
+    table .cCheckBox{width: 50px; padding: 2px;}
+    table .cOrder{width: 50px; padding: 2px;}
+    table .c1{width: 200px; padding: 2px;}
+    table .c2{width: 150px; padding: 2px;}
+    table .c3{ padding: 2px;}
+    table .c4{width: 150px; padding: 2px;}
+    table .c5{width: 200px; padding: 2px;}
+    table .c6{width: 80px; padding: 2px;}
+    
+    table .cFunc{width: 100px; padding: 2px;}
+    
+  </style>
+  <div id="table-header" style="overflow: hidden;">
+  <table class="table table-striped table-bordered table-header" style="width:1250px;">       
+    <thead>
+      <tr>
+        <th class="cCheckBox"><input style="margin-bottom: 5px;" id="cb_all" type="checkbox" /> </th>
+        <th class="cOrder"><?php echo NHK_Properties::get("title_column_order", 'public',$properties); ?></th>
+        <th class="c1"><?php echo NHK_Properties::get("title_column_title", $section,$properties); ?></th>
+        <th class="c2"><?php echo NHK_Properties::get("title_column_thumb", $section,$properties); ?></th>
+        <th class="c3"><?php echo NHK_Properties::get("title_column_short_des", $section,$properties); ?></th>
+        <th class="c4"><?php echo NHK_Properties::get("title_column_time_post", $section,$properties); ?></th>
+       
+<!--        <th class="c5"><a class="sort" key="giatien" order="ASC" href="javascript:"><?php echo NHK_Properties::get("title_column_giatien", $section,$properties); ?></a></th>-->
+        <th class="cFunc"><?php echo NHK_Properties::get("title_column_function", 'public',$properties); ?></th>
+      </tr>
+    </thead>
+  </table>
+    
+  </div>
+  
+  <div id="table-data" style="max-height: 300px;overflow: auto;">
+  <table  class="table table-striped table-hover table-condensed table-bordered" style="width:1250px;">
+    <tbody id="data_table">
+      
+    </tbody>
+  </table>
+    </div>
+</div>
+<!--/table list-->
+<input type="hidden" id="current_page" value="1" />
+
+<div class="page-footer navbar  navbar-fixed-bottom">
+  <div class="form-inline">
+    <div class="form-inline view_per_page" >View: <?php echo NHK_Helper::select("perpages", $perpage, $this->params, 'input-small'); ?></div>
+    <div class="nhk-pagination" id="pagination_bottom"></div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+
+<!---->
+
+<!--Modal Form-->
+
+<!--/ Modal Form-->
+
+<!--Modal Delete-->
+<?= $this->partial("{$section}/_modal_delete.phtml",array('properties'=>$properties)); ?>
+
+<!--/ Modal Delete-->
+
+
+<!--Modal Notice-->
+<?= $this->render('common/modal_notice.phtml') ?>
+<!--/Modal Notice-->
+
+<script type="text/javascript">
+  var url = '<?php echo NHK_URL::getLinkControllerAdmin($link); ?>';
+//  var msg_confirm = "<?php echo NHK_Properties::get("confirm_delete", 'user', $properties); ?>";
+  var title_modal_add = "Thêm <?php echo NHK_Properties::get("common", $section, $properties); ?>";
+  var title_modal_edit = "Thay đổi thông tin <?php echo NHK_Properties::get("common", $section, $properties); ?>";
+  var msg_confirm_delete_select = "<?php echo NHK_Properties::get("confirm_delete_select", 'public', $properties); ?>";
+  var msg_notice_no_select = "<?php echo NHK_Properties::get("msg_notice_no_select", 'public', $properties); ?>";
+  $(document).ready(function() {
+
+
+    /*---- table-----*/
+
+    $("#table-data").scroll(function () {
+            var scrollLeft = $(this).scrollLeft();
+            $("#table-header").scrollTo(scrollLeft);            
+    });
+    
+    initTable();
+  /*---- end table-----*/
+
+    $("#search_date").datepicker({
+        dateFormat: 'dd-mm-yy',
+        monthNames:['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'],
+        monthNamesShort: ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'],
+        dayNamesMin: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+        dayNames: ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy']
+    }).change(function(){loadPage(1);});
+    
+    $(".input_search").keyup(function(){
+      loadPage(1);
+    });
+  });
+
+  function clearInput(tag_id){
+      $("#"+tag_id).find('input').each(function(){
+        $(this).val('');
+      });
+  }
+
+  function clearFrom() {
+    clearInput('myForm');
+    $('input[name="data[status]"]').removeAttr('checked');
+  }
+  
+  
+  
+  function editForm(obj) {
+      for(var item in obj){
+        $('input[name="data['+item+']"]').val(obj[item]);      
+      }
+      $("#id").val(obj.id);
+      if(obj.status == 1)
+        $('input[name="data[status]"]').attr('checked','checked');
+      else
+        $('input[name="data[status]"]').removeAttr('checked');
+  }
+  function getFilter() {
+    var filter = '';
+
+    var name = $("#input_search").val();
+    if (name != '') {
+      name = encodeURI(name);
+      filter += "/name/" + name;
+    }
+
+    return filter;
+  }
+
+  function confirmDelete(obj) {
+    var str = 'ID:' + obj.id + " " + obj.title;
+    return str;
+  }
+  
+  
+  initTable = function(){
+    
+    if($(".table-header").width()> $(window).width()){      
+      var w = $(".table-header").find('th:last').width();
+      $(".table-header").width($(".table-header").width()+17);
+      $(".table-header").find('th:last').width(parseInt(w)+17);
+    }
+    
+   
+  };
+  
+
+</script>
+<script src="<?php echo NHK_URL::getLinkPublic("js") ?>/jquery_scrollTo.js" type="text/javascript"></script>
+<script src="<?php echo NHK_URL::getLinkPublic("js") ?>/list.js" type="text/javascript"></script>
+
+<!--Datepicker jquery UI-->
+<link href="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/css/jquery-ui.min.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/css/jquery.ui.datepicker.min.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/js/jquery.ui.core.min.js" type="text/javascript"></script>
+<script src="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/js/jquery.ui.widget.min.js" type="text/javascript"></script>
+<script src="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/js/jquery.ui.datepicker.min.js" type="text/javascript"></script>

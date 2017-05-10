@@ -1,0 +1,56 @@
+<div id="modal_add" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a class="btn close" aria-hidden="true" data-dismiss="modal">x</a>
+    <h3 id="myModalLabel"><?php echo NHK_Properties::get("title_modal_add", $this->section, $this->properties); ?></h3>
+  </div>
+  <form id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/add">
+    <div class="modal-body">
+
+      <input type="hidden" id="id" name="id" value="" />
+      <p id="info_edit" class="text-error lead" align="center"></p>
+      <div class="form-horizontal">
+        
+        <?php 
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_username", $this->section, $this->properties), 
+                                              'data[username]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_password", $this->section, $this->properties), 
+                                              'data[password_show]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_fullname", $this->section, $this->properties), 
+                                              'data[fullname]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_phone", $this->section, $this->properties), 
+                                              'data[phone]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_address", $this->section, $this->properties), 
+                                              'data[address]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_email", $this->section, $this->properties), 
+                                              'data[email]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_time_expired", $this->section, $this->properties), 
+                                              'data[time_expired]', 
+                                              null, 'text', "input-xlarge",date('d-m-Y',time()+(30*86400)));
+            
+            echo NHK_Helper::form_item_input_checkbox(NHK_Properties::get("title_column_status", $this->section, $this->properties),
+                                              "data[status]",1, $this->params,false);
+            
+        ?>
+      </div>
+
+
+
+      <div id="errorModal" class="alert alert-error">
+        <h4>Error</h4>
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("close", 'public',$this->properties); ?></a>
+      <button type="submit" id="btnSubmit" class="btn btn-primary"><?php echo NHK_Properties::get("save", 'public',$this->properties); ?></button>
+    </div>
+  </form>
+</div>

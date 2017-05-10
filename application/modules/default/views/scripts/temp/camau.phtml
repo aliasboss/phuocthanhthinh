@@ -1,0 +1,405 @@
+<style>
+
+    .giavang-maiquyen table{
+       float: left;
+       margin-right: 20px;
+    }
+    
+    .giangoaite-maiquyen table{
+       float: left;
+       margin-right: 20px;
+    }
+        .giavang-maiquyen table tr{	                
+                border-bottom: 1px solid #CCCCCC;
+                border-top: 1px solid #CCCCCC;
+	}
+        .giavang-maiquyen table td{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                font-weight: bold;
+	}
+        .giavang-maiquyen table th{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                color: #dddddd;
+                background-color: #B80000;
+	}
+        
+        .giangoaite-maiquyen table tr{	                
+                border-bottom: 1px solid #CCCCCC;
+                border-top: 1px solid #CCCCCC;
+	}
+        .giangoaite-maiquyen table td{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                font-weight: bold;
+	}
+        .giangoaite-maiquyen table th{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                color: #dddddd;
+                background-color: #B80000;
+	}
+        .giamq75 table th{
+            background-color: #536DFE;
+            color: #FFFFFF;
+        }
+        
+        .giamq75 table td{
+            font-weight: bold;
+        }
+</style>
+<style type="text/css">
+    table.load td{padding:5px;border:1px solid #0746F7}
+    #loadbar{width:100%;text-align:center;display:block;transition:all .3s;-moz-transition:all .3s;-webkit-transition:all .3s;-o-transition:all .3s}.bogoc{border-bottom:rgb(255,0,0) 4px solid;border-left:rgb(255,0,0) 4px solid;padding-bottom:0;margin:0 auto;outline-style:none;outline-color:invert;padding-left:0;outline-width:medium;width:457.18px;padding-right:0;border-top:rgb(255,0,0) 4px solid;border-right:rgb(255,0,0) 4px solid;padding-top:0;border-top-left-radius:15px;border-top-right-radius:15px;border-bottom-left-radius:15px;border-bottom-right-radius:15px;padding:10px 10px 30px 10px}.fonthead{font-weight:bold;color:rgb(0,0,205)}.fontred{font-weight:bold;color:rgb(255,0,0)}.fontgreen{font-weight:bold;color:rgb(0,128,0)}.fontxanhla{font-weight:bold;color:#1F6400}.bogoc h2{text-align:center;color:rgb(255,0,0);font-weight:bold;margin-bottom:10px}.k18{background:#4747CD;font-weight:bold;color:#fff}.hidden{display:none}</style>
+
+
+ 
+  
+  
+  <div class="bogoc">
+<h2>GIÁ VÀNG (VND)</h2>
+<h4 id="waiting">Hệ thống đang cập nhật giá vui lòng đợi giây lát ... ... ...</h4>
+<table style="width: 100%"  class="load">
+<tr>
+<td class="fonthead">Tên</td>
+<td class="fonthead">Mua</td>
+<td class="fonthead">Bán</td>
+<td class="fonthead hidden">C/L</td>        
+</tr>
+<tr>
+<td class="fontxanhla" id="tieude1">BONG PHAN</td>
+<td id="dong1_mua" class="fontred"> </td>
+<td id="dong1_ban" class="fontred">0 </td>                 
+<td  class="hidden" > </td>
+</tr>
+<tr>
+<td class="fontxanhla" id="tieude2">BONG KY</td>
+<td id="dong2_mua" class="fontred"> </td>
+<td id="dong2_ban" class="fontred">0 </td>                 
+<td  class="hidden" > </td>
+</tr>
+<tr>
+<td class="fontxanhla" id="tieude3">950</td>
+<td id="dong3_mua" class="fontred"></td>
+<td id="dong3_ban" class="fontred"> </td>                 
+<td class="hidden" > </td>
+</tr>   
+<tr>
+<td class="fontxanhla" id="tieude3">Si</td>
+<td id="si_mua" class="fontred">00.000 </td>
+<td id="si_ban" class="fontred"> </td>                 
+<td class="hidden" > </td>
+</tr>  
+<!--
+<tr>
+<td class="k18">USD (Mỹ)</td>
+<td id="K18" class="k18" >0</td>
+<td class="k18">100 </td>  
+<td class="k18 hidden"> </td>
+</tr>
+                     
+<tr>
+<td class="fonthead">AUD (Úc)</td>
+<td id="AUD" class="fontred"> </td>
+<td id="A2" class="fontred">100 </td>
+<td id="A5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">CAD (Canada)</td>
+<td id="CAD" class="fontred"></td>
+<td id="C2" class="fontred">100</td>
+<td id="C5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">CHF (Thụy Sỹ)</td>
+<td id="CHF" class="fontred"></td>
+<td id="CH2" class="fontred">100</td>
+<td  id="CH5 hidden" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">EUR (Euro)</td>
+<td id="EUR" class="fontred"></td>
+<td id="E2" class="fontred">100</td>  
+<td id="E5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">GBP (Anh)</td>
+<td id="GBP" class="fontred"></td>
+<td id="G2" class="fontred">100</td>
+<td id="G5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">JPY (Nhật)</td>
+<td id="JPY" class="fontred"></td>
+<td id="J2" class="fontred">1,000</td>
+<td id="J5" class="fontred hidden"> </td>
+</tr>
+<tr>
+
+<td class="fonthead">HKD (Hồng Kông)</td>
+<td id="HKD" class="fontred"></td>
+<td id="H2" class="fontred">100</td>
+<td id="H5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">SGD (Singapore)</td>
+<td id="SGD" class="fontred"></td>
+<td id="SGD2" class="fontred">100</td>                
+<td id="SGD5" class="fontred hidden"> </td>                
+</tr>
+<tr>
+<td class="fonthead">THB (Thái Lan)</td>
+<td id="THB" class="fontred"></td>
+<td id="THB2" class="fontred">1,000</td>
+<td  id="THB5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">CNY (Trung Quốc)</td>
+<td  id="CNY" class="fontred"></td>
+<td  id="CNY2" class="fontred">100</td>  
+<td id="CNY5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">KRW (Hàn Quốc)</td>
+<td id="KRW" class="fontred"></td>
+<td id="K2" class="fontred">1,000</td>   
+<td id="K5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">MYR (Malaysia)</td>
+<td id="MYR" class="fontred"></td>
+<td id="M2" class="fontred">100</td> 
+<td id="M5" class="fontred hidden"> </td>
+</tr>
+<tr>
+<td class="fonthead">TWD (Đài Loan)</td>
+<td id="TWD" class="fontred"></td>
+<td id="TW2" class="fontred">1,000</td>
+<td id="TW5" class="fontred hidden"> </td>
+</tr>
+-->
+</table>
+
+<!--<div style="margin-top: 20px; font-weight: bold">
+    <a target="_blank" href="http://phuocthanhthinh.com.vn" title="DNTN Vàng Phước Thạnh">www.phuocthanhthinh.com.vn</a>
+</div>-->
+</div>
+
+  
+  
+  
+  <div style="display: none;" class="box giavang-maiquyen">
+      <?php //echo $this->render('index/giavangmaiquyen.phtml'); style="display: none;" ?>
+  </div>
+   <div   class="box giangoaite-maiquyen">
+      <?php //echo $this->render('index/giavangmaiquyen.phtml');  ?>
+  </div>
+
+
+
+  <script src="<?php echo NHK_URL::getLinkPublic("js") ?>/jquery-1.8.2.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  var url = '<?= NHK_URL::getLinkControllerDefault('phuocthanhthinh') ?>';
+ 
+  var urlIframe = (window.location !== window.parent.location)? document.referrer: document.location.hostname;
+  var urlCheck1 = "http://phuocthanhthinh.com.vn/";
+  var urlCheck2 = "http://www.phuocthanhthinh.com.vn/";
+  var urlCheck3 = "http://hoikimhoancamau.com/";
+  var urlCheck4 = "http://www.hoikimhoancamau.com/";
+  
+  $(document).ready(function(){
+//     init();
+//    auto_get_value();
+    if(
+              urlIframe.localeCompare(urlCheck1) == 0 ||
+              urlIframe.localeCompare(urlCheck2) == 0 ||
+              urlIframe.localeCompare(urlCheck3) == 0 ||
+              urlIframe.localeCompare(urlCheck4) == 0
+                ){
+                     init();
+                    auto_get_value();
+                } else{
+                    window.location= "http://phuocthanhthinh.com.vn/contact/";
+                }        
+  });
+  
+  init = function(){
+    getGiaMq75();
+    //getNgoaiTe();
+  
+  };
+  
+  auto_get_value = function(){
+   
+      setInterval(getGiaMq75,300000);
+      //setInterval(getNgoaiTe,300000);
+    
+  
+
+  };
+  
+  getGiaMq75 = function(){
+    $.post(url+'/getgiamq75', {}, function(res){
+        $('.giavang-maiquyen').html(res);    
+        
+        
+        $(".giavang-maiquyen table:eq(0)").width(400);
+ 
+         $(".giavang-maiquyen table:eq(1)").width(400);
+         
+        var str_bk_ban = $(".giavang-maiquyen table:eq(1) td:eq(7)").html();
+        var str_bk_mua = $(".giavang-maiquyen table:eq(1) td:eq(6)").html();
+        var str_bp_ban = $(".giavang-maiquyen table:eq(1) td:eq(5)").html();
+        var str_bp_mua = $(".giavang-maiquyen table:eq(1) td:eq(4)").html();
+        var str_95_ban = $(".giavang-maiquyen table:eq(1) td:eq(3)").html();
+        var str_sjc_ban = $(".giavang-maiquyen table:eq(1) td:eq(11)").html();
+        var str_sjc_mua = $(".giavang-maiquyen table:eq(1) td:eq(10)").html();
+        
+        $("#dong1_ban").html(str_bp_ban.trim());
+        $("#dong2_ban").html(str_bk_ban.trim());
+        $("#dong1_mua").html(str_bp_mua.trim());
+        $("#dong2_mua").html(str_bk_mua.trim());
+        $("#dong3_ban").html(str_95_ban.trim());
+        $("#si_mua").html(str_sjc_mua.trim());
+        $("#si_ban").html(str_sjc_ban.trim());
+        
+	 var currentDate = new Date();
+        $("#waiting").html("Giá được cập nhật lúc: "+currentDate.toLocaleString());
+    });
+  };
+  getNgoaiTe = function(){
+    $.get(url+'/getgiangoaite', {}, function(res){
+        $('.giangoaite-maiquyen').html(res);
+       // $(".giangoaite-maiquyen table:eq(0) tr:eq(1) th:eq(2)").remove();
+       // $(".giangoaite-maiquyen table:eq(0) tr:eq(2) td:eq(2)").remove();
+       // $(".giangoaite-maiquyen table:eq(0) tr:eq(3) td:eq(2)").remove();
+       // $(".giangoaite-maiquyen table:eq(0) tr:eq(4) td:eq(2)").remove();
+       // $(".giangoaite-maiquyen table:eq(0) tr:eq(5) td:eq(2)").remove();
+        $(".giangoaite-maiquyen table:eq(0)").width(400);
+        
+      //  $(".giangoaite-maiquyen table:eq(2) tr:eq(1) th:eq(4)").remove();
+      //  $(".giangoaite-maiquyen table:eq(2) tr:eq(1) th:eq(4)").remove();
+      //  $(".giangoaite-maiquyen table:eq(2) tr:eq(16)").remove();
+     //   $(".giangoaite-maiquyen table:eq(2) tr:eq(16)").remove();
+  /*
+        $(".giangoaite-maiquyen table:eq(2) tr").each(function(a) {                   
+                    $(".giangoaite-maiquyen table:eq(2) tr:eq("+a+") td:eq(3)").remove();
+                    $(".giangoaite-maiquyen table:eq(2) tr:eq("+a+") td:eq(3)").remove();
+        });
+      */
+      $(".giangoaite-maiquyen table:eq(2)").width(500);
+      
+      var gia = new Array();
+      //gia[$(".giangoaite-maiquyen table:eq(2) th:eq(4)").html()] = $(".giangoaite-maiquyen table:eq(2) td:eq(1)").html();
+     // gia[$(".giangoaite-maiquyen table:eq(2) th:eq(5)").html()] = $(".giangoaite-maiquyen table:eq(2) td:eq(4)").html();
+	 
+	 //$(".giangoaite-maiquyen table:eq(2) tr:eq(2) .price1").html()
+         
+            gia["AUD"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(2) .price1").html();//AUD
+            gia["CAD"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(3) .price1").html();//CAD
+            gia["CHF"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(4) .price1").html();//CHF
+            gia["EUR"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(5) .price1").html();//EUR
+            gia["GBP"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(6) .price1").html();//GBP
+            gia["JPY"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(7) .price1").html();//JPY
+            gia["NZD"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(8) .price1").html();//NZD
+
+            var flag = $(".giangoaite-maiquyen table:eq(2) tr:eq(9) th:eq(0)").html();
+            if (typeof(flag) === "undefined" )
+                gia["K18"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(9) td:eq(1)").html();
+            else
+                gia["K18"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(9) td:eq(0)").html();
+            
+            gia["HKD"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(10) .price1").html();//HKD
+            gia["SGD"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(11) .price1").html();
+            gia["THB"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(12) .price1").html();
+            gia["CNY"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(13) .price1").html();
+            gia["KRW"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(14) .price1").html();
+            gia["MYR"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(15) .price1").html();
+            gia["TWD"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(16) .price1").html();
+            gia["BND"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(17) .price1").html();
+            gia["IDR"] = $(".giangoaite-maiquyen table:eq(2) tr:eq(18) .price1").html();
+	 
+//      gia["AUD"] = $(".giangoaite-maiquyen table:eq(2) td:eq(2)").html();//AUD
+//      gia["CAD"] = $(".giangoaite-maiquyen table:eq(2) td:eq(7)").html();//CAD
+//      gia["CHF"] = $(".giangoaite-maiquyen table:eq(2) td:eq(12)").html();//CHF
+//      gia["EUR"] = $(".giangoaite-maiquyen table:eq(2) td:eq(18)").html();//EUR
+//      gia["GBP"] = $(".giangoaite-maiquyen table:eq(2) td:eq(24)").html();//GBP
+//      gia["JPY"] = $(".giangoaite-maiquyen table:eq(2) td:eq(30)").html();//JPY
+//      gia["NZD"] = $(".giangoaite-maiquyen table:eq(2) td:eq(34)").html();//NZD
+//      
+//      gia["K18"] = $(".giangoaite-maiquyen table:eq(2) td:eq(40)").html();
+//      gia["HKD"] = $(".giangoaite-maiquyen table:eq(2) td:eq(45)").html();//HKD
+//      
+//      gia["SGD"] = $(".giangoaite-maiquyen table:eq(2) td:eq(50)").html();
+//      gia["THB"] = $(".giangoaite-maiquyen table:eq(2) td:eq(55)").html();
+//      gia["CNY"] = $(".giangoaite-maiquyen table:eq(2) td:eq(61)").html();
+//      gia["KRW"] = $(".giangoaite-maiquyen table:eq(2) td:eq(66)").html();
+//      gia["MYR"] = $(".giangoaite-maiquyen table:eq(2) td:eq(71)").html();
+//      gia["TWD"] = $(".giangoaite-maiquyen table:eq(2) td:eq(76)").html();
+//      gia["BND"] = $(".giangoaite-maiquyen table:eq(2) td:eq(81)").html();
+//      gia["IDR"] = $(".giangoaite-maiquyen table:eq(2) td:eq(86)").html();
+      
+      //gia["AUD"] = gia["AUD"] + "";
+      //console.log(typeof gia["AUD"]);
+      
+      $("#AUD").html(dieuchinhgia(gia["AUD"]));
+      $("#CAD").html(dieuchinhgia(gia["CAD"]));
+      $("#CHF").html(dieuchinhgia(gia["CHF"]));
+      $("#EUR").html(dieuchinhgia(gia["EUR"]));
+      $("#GBP").html(dieuchinhgia(gia["GBP"]));
+      $("#JPY").html(dieuchinhgia(gia["JPY"]));
+      $("#K18").html(dieuchinhgia(gia["K18"]));
+      $("#HKD").html(dieuchinhgia(gia["HKD"]));
+      $("#SGD").html(dieuchinhgia(gia["SGD"]));
+      $("#THB").html(dieuchinhgia(gia["THB"]));
+      $("#CNY").html(dieuchinhgia(gia["CNY"]));
+      $("#KRW").html(dieuchinhgia(gia["KRW"]));
+      $("#MYR").html(dieuchinhgia(gia["MYR"]));
+      $("#TWD").html(dieuchinhgia(gia["TWD"]));
+      
+//      var giangoaite = [];
+//        var mangoaite = ["AUD","CAD","CHF","EUR","GBP","NZD","TWD","SGD","MYR","KRW","HKD","NZD","CNY","THB","RUB","IDR","PHP","LAK","KHR","USD"];
+//
+//        var flagMa = 15;
+//        var flagGia = 17;
+//        for	(index = 0; index < mangoaite.length; index++) {
+//            giangoaite[$(".giangoaite-maiquyen table:eq(0) td:eq("+flagMa.toString()+")").html()] = $(".giangoaite-maiquyen table:eq(0) td:eq("+flagGia.toString()+")").html();
+//            flagMa = flagMa+5;
+//            flagGia = flagGia+5;
+//        }
+//        var gia = 0;
+//        for	(index = 0; index < mangoaite.length; index++) {
+//            gia = giangoaite[mangoaite[index]] *1;
+//            $("#"+mangoaite[index]).html(gia.format());
+//        }
+      
+      
+      
+    });
+  };
+  
+  function dieuchinhgia(gia){
+      //console.log(typeof gia);
+      if(gia.indexOf(',')>0){
+          gia = gia.replace(",","");
+          var giaN = gia *1;
+          giaN = giaN/10;
+          return giaN.format();
+      }
+      
+          
+     
+      return Math.round(gia*1);
+  }
+  
+  
+  Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+};
+</script>
+
+    

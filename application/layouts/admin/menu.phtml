@@ -1,0 +1,37 @@
+
+<div id="div_menu" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Quản Trị</a>
+            <div class="nav-collapse collapse">
+                              <?php if(AdminUser::is_login()): ?>
+
+                <p style="margin-left: 10px;" class="navbar-text pull-right">
+                    <a href="<?php echo NHK_URL::getLinkControllerAdmin('index').'/logout/'?>" class="navbar-link">Log Out</a>
+                </p>
+                <p style="margin-left: 10px;" class="navbar-text pull-right">
+                  |
+                </p>
+                <p class="navbar-text pull-right">
+                    Đăng nhập: <a href="<?= NHK_URL::getLinkControllerAdmin('user') ?>/doimatkhau/?id=<?php echo NHK_Auth::getAdmin()->id; ?>" class="navbar-link"><?php echo NHK_Auth::getAdmin()->username; ?></a>
+                </p> 
+                
+                <ul class="nav">
+                    <li <?php if($this->menu == 'user') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('user') ?>">QL người dùng</a></li>
+                   <li <?php if($this->menu == 'banner') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('banner') ?>">QL Banner</a></li>
+                    <li <?php if($this->menu == 'news') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('news') ?>">QL tin tức</a></li>
+                   <li <?php if($this->menu == 'event') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('event') ?>">QL tin tức Trong Hội</a></li>
+                   <li <?php if($this->menu == 'capnhatgiacamau') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('capnhatgia') ?>">Cập Nhật Bảng Giá</a></li>
+                   <li <?php if($this->menu == 'thongbao') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('news') ?>/thong-bao">Cập Nhật Thông báo</a></li>
+                   <li <?php if($this->menu == 'laygia') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerAdmin('user') ?>/thaydoiwebsitelaygia">Thay Đổi WEB Lấy Giá</a></li>
+                </ul>
+                <?php endif; ?>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="box">
+    <div class="box-header">Lịch Sử Giá Vàng Của Hội Kim Hoàn Cà Mau</div>
+    <div class="box-content">
+        <?php
+        echo NHK_Helper::form_item_input("Ngày", 'ngay', null, 'text', "input-xlarge", date('d-m-Y', time()));
+        ?>
+        
+        <div id="show">
+            
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var url = '<?php echo NHK_URL::getLinkControllerDefault("lichsugiavang"); ?>';
+
+    $(document).ready(function () {
+        $("input[name='ngay']").datepicker({
+            dateFormat: 'dd-mm-yy',
+            monthNames: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+            monthNamesShort: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+            dayNamesMin: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+            dayNames: ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy']
+        });
+        
+        $("input[name='ngay']").change(function(){
+            lichsu($(this).val());
+        });
+        lichsu($("input[name='ngay']").val());
+    });
+    
+    lichsu = function(ngay){
+        $.post(url + '/lichsu', {ngay:ngay}, function (res) {
+            $("#show").html(res);
+//            $("#v999_m").html(data['v999']['m']);
+//            $("#v999_b").html(data['v999']['b']);
+//
+//            $("#v980_m").html(data['v980']['m']);
+//            $("#v980_b").html(data['v980']['b']);
+//
+//            $("#v960_m").html(data['v960']['m']);
+//            $("#v960_b").html(data['v960']['b']);
+//
+//            $("#v750_m").html(data['v750']['m']);
+//            $("#v750_b").html(data['v750']['b']);
+//
+//            $("#v680_m").html(data['v680']['m']);
+//            $("#v680_b").html(data['v680']['b']);
+//
+//            $("#v610_m").html(data['v610']['m']);
+//            $("#v610_b").html(data['v610']['b']);
+//
+//            $("#v585_m").html(data['v585']['m']);
+//            $("#v585_b").html(data['v585']['b']);
+
+            
+            
+        });
+    };
+</script>
+
+
+<link href="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/css/jquery-ui.min.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/css/jquery.ui.datepicker.min.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/js/jquery.ui.core.min.js" type="text/javascript"></script>
+<script src="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/js/jquery.ui.widget.min.js" type="text/javascript"></script>
+<script src="<?php echo NHK_URL::getLinkPublic("jqueryUI") ?>/js/jquery.ui.datepicker.min.js" type="text/javascript"></script>

@@ -1,0 +1,30 @@
+
+<form class="form-horizontal" id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/phuocthanhthinh">
+   <div class="modal-footer">
+    <!--<a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("close", 'public', $this->properties); ?></a>-->
+    <button type="submit" class="btn btn-primary"><?php echo NHK_Properties::get("save", 'public', $this->properties); ?></button>
+  </div>
+   <?php if(isset($this->error)): ?>
+  <div id="errorModal" class="alert alert-error">
+    <h4>Error</h4>
+      <?php echo $this->error; ?>
+    
+  </div>
+  <?php endif; ?>
+<br />
+<span style="font-size: 16px; padding-top: 10px; padding-bottom: 10px;" class="label label-inverse">
+    Hãy [copy] đường dẫn tin tức cần lấy từ website phuocthanhthinh.com.vn. Sau đó [paste] vào ô bên dưới --> Nhấp nút Save.
+  </span>
+<hr />
+  <?php
+  echo NHK_Helper::form_item_input('Đường dẫn', 'url', $this->params, 'text', "input-xxlarge",'');
+  ?>
+
+
+
+ <div class="modal-footer">
+    <button type="submit" class="btn btn-primary"><?php echo NHK_Properties::get("save", 'public', $this->properties); ?></button>
+  </div>
+
+ 
+</form>

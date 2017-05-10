@@ -1,0 +1,50 @@
+<div id="modal_add" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a class="btn close" aria-hidden="true" data-dismiss="modal">x</a>
+    <h3 id="myModalLabel"><?php echo NHK_Properties::get("title_modal_add", $this->section, $this->properties); ?></h3>
+  </div>
+  <form id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/add">
+    <div class="modal-body">
+
+      <input type="hidden" id="id" name="id" value="" />
+      <p id="info_edit" class="text-error lead" align="center"></p>
+      <div class="form-horizontal">
+        
+        <?php 
+            echo NHK_Helper::form_item_input("Tên Banner", 
+                                              'data[name]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input("Địa Chỉ", 
+                                              'data[address]', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input("Điện Thoại", 
+                                              'data[phone]', 
+                                              $this->params, 'text', "input-xlarge");
+           
+            echo NHK_Helper::form_item_input("Ngày Hết Hạn", 
+                                              'data[date_expired]', 
+                                              null, 'text', "input-xlarge",date('d-m-Y',time()+(30*86400)));
+            
+            echo NHK_Helper::form_item_textarea("Ghi Chú", 'data[note]', null, 5,5);
+            
+            echo NHK_Helper::form_item_input_checkbox("Khóa",
+                                              "data[status]",1, $this->params,false);
+            
+        ?>
+      </div>
+
+
+
+      <div id="errorModal" class="alert alert-error">
+        <h4>Error</h4>
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("close", 'public',$this->properties); ?></a>
+      <button type="submit" id="btnSubmit" class="btn btn-primary"><?php echo NHK_Properties::get("save", 'public',$this->properties); ?></button>
+    </div>
+  </form>
+</div>

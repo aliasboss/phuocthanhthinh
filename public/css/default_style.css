@@ -1,0 +1,428 @@
+/* Website template by freewebsitetemplates.com */
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* Custom container */
+.container {
+
+}
+.container > hr {
+
+}
+
+
+
+
+
+.box{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+}
+.box-header{
+    padding: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #aaa;
+    background-color: #ffe207;
+    color: #C80101;
+    text-shadow: 1px 1px #FDF2BE;
+    font-weight: bold;
+}
+.box-content{
+    padding: 5px;
+}
+
+#main_1 {
+    float: right;
+    background-color: #fdf6ea;
+
+    width: 940px;
+    margin: 0 24px 0 12px;
+    padding: 12px 12px 22px;
+}
+#main_1 div.body {
+    padding: 0 30px;
+}
+
+.cantho table td{
+    padding: 2px 5px 2px 5px;
+}
+.cantho table th{
+    padding: 5px 5px 5px 5px;
+    text-transform: uppercase;
+}
+
+.media .media-object{
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.giavang-maiquyen table{
+    float: left;
+    margin-right: 20px;
+}
+
+.giangoaite-maiquyen table{
+    float: left;
+    margin-right: 20px;
+}
+.giavang-maiquyen table tr{	                
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+}
+.giavang-maiquyen table td{	                
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+.giavang-maiquyen table th{	                
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    color: #dddddd;
+    background-color: #B80000;
+}
+
+.giaphuthinh table tr{	                
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+}
+.giaphuthinh table td{	                
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+.giaphuthinh table th{	                
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    color: #dddddd;
+    background-color: #B80000;
+}
+.giamq75 table th{
+    background-color: #536DFE;
+    color: #FFFFFF;
+}
+
+.giamq75 table td{
+    font-weight: bold;
+}
+.td_ngoaite_menhgia{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.table_gia{
+    border: 2px solid #000;
+    border-collapse: collapse;
+    padding: 2px;
+    /*         width: 380px;    */
+}
+
+
+.table_gia td{
+    border: 1px solid #000;
+    padding: 5px;
+    font-weight: bold;
+    color: #F00;
+    font-size: 19px;
+}
+.table_gia th{
+    border: 1px solid #000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #00f;
+    font-family: Arial; text-align: center;
+}
+
+.title1{
+    color: #00F;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.title2{
+    color: #F00;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.border1{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 5px #f00 solid;
+    padding: 10px;
+}
+.banggiavang{
+    border: 1px #f00 solid;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+}
+.content1{
+    color:#026702;
+    text-align: center;
+}
+
+.vang18k{
+    border-top: 1px #F00 dashed;
+}
+
+
+.bg_nav{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffe207+57 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffe207 57%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffe207 57%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#ffe207 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffe207',GradientType=0 ); /* IE6-9 */
+}
+.bg_nav .brand{
+    color:#C80101;
+
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: #C80101  ;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
+    background-color: #C80101;
+}
+.navbar-inverse .nav > li > a:hover {
+    color: #ffffff;
+    background-color: #C93F3F;
+
+}
+.hero-unit{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffe207+57 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffe207 57%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffe207 57%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#ffe207 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffe207',GradientType=0 ); /* IE6-9 */
+
+    padding: 25px;
+    margin-bottom: 1px;
+
+}
+.footer{
+    color: #C93F3F;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe207+30,ffffff+100 */
+    background: rgb(255,226,7); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,226,7,1) 30%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,226,7,1) 30%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,226,7,1) 30%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe207', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.ads{
+    padding-top: 10px;
+}
+footer {
+
+}
+
+
+.block-stat ul li {
+    padding: 4px 0 4px 26px;
+
+}
+
+
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.block-stat ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+
+.footer_left{
+    float: left;
+    width: 480px;
+}
+.footer_right{
+    float: right;
+    margin-right: 15px;
+}
+
+
+
+
+/*  bảng giá vàng cà mau*/
+
+.banggiacamau_right{
+    float: left;
+
+    /*        border: 1px solid #000;*/
+    width: 190px;
+    height: 402px;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.banggiacamau_left{
+    text-align: center;
+    padding: 15px;
+    border: 3px solid #F00;
+    border-radius: 6px;
+}
+.table-bang-gia-ca-mau.table th{
+    text-align: center;
+    color: #00F;
+}
+
+td.loai_vang{
+    color: #f00;
+    font-weight: bold;
+    text-align: center;
+}
+.table-bang-gia-ca-mau td{
+    color: #f00;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+
+}
+.table-bang-gia-ca-mau.table-bordered{
+    border: 2px solid #F00;
+    border-radius: 6px;
+}
+
+.ads_1{
+    border: 1px solid #f00;
+    width: 180px;
+    height: 200px;
+    font-size: 18px;
+    text-align: center;
+    color: #ddd;
+    float: left;
+}
+
+/*  bảng giá vàng cà mau----------------------------------------*/
+
+
+
+/* Bảng giá vàng ngoại tệ */
+table.load td{padding:5px;border:1px solid #0746F7;text-align: left;}
+.bogoc{border-bottom:rgb(255,0,0) 4px solid;border-left:rgb(255,0,0) 4px solid;
+       padding-bottom:0;margin:0 auto;outline-style:none;outline-color:invert;padding-left:0;outline-width:medium;
+       width:485px;padding-right:0;border-top:rgb(255,0,0) 4px solid;
+       border-right:rgb(255,0,0) 4px solid;padding-top:0;border-top-left-radius:15px;
+       border-top-right-radius:15px;border-bottom-left-radius:15px;border-bottom-right-radius:15px;
+       margin-left: 10px;}
+.fonthead{font-weight:bold;color:rgb(0,0,205)}
+.fontred{font-weight:bold;color:rgb(255,0,0)}
+.fontgreen{font-weight:bold;color:rgb(0,128,0)}
+.fontxanhla{font-weight:bold;color:#1F6400}
+.bogoc h2{text-align:center;color:rgb(255,0,0);font-weight:bold;margin-bottom:10px}
+.k18{background:#4747CD;font-weight:bold;color:#fff}.hidden{display:none}
+.banggiangoaite_left{
+    border: 3px solid #F00;
+    border-radius: 6px;
+    text-align: center;
+    padding: 15px;
+} 
+
+.banggiangoaite_right{
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+/*    border: 1px solid #000;*/
+    width: 190px;
+    height: 605px;
+}
+.ads_2{
+    border: 1px solid #f00;
+    width: 180px;
+    height: 200px;
+    font-size: 18px;
+    text-align: center;
+    color: #ddd;
+    float: left;
+
+}
+
+/* Bảng giá vàng ngoại tệ ----------------- */
+
+/*Bảng giá vàng thế giới */
+
+
+.left-buy .swap-block{float:right;padding:9px 0 0 0}
+.swap-block p{color:#606a70;padding:0}
+.swap-block p em{font-style:normal;color:#ed1c24}
+.left-buy{width:100%;overflow:hidden;padding:0 0 9px;border-bottom:2px solid #d7dce0}
+.left-buy 
+.buy{font:bold 3.286em/1.043em Arial,Helvetica,sans-serif;float:left;color:#000;padding:0 30px 0 0}
+.left-buy 
+.buy_value{position:relative}
+.left-buy .down .arrow,.left-buy .up .arrow{
+    position:absolute;bottom:8px;
+    right:-30px;width:0;height:0;border-style:solid;
+    border-width:0 10.5px 15px 10.5px;border-color:transparent transparent #29a643 transparent}
+.left-buy .down .arrow{
+    border-width:15px 10.5px 0 10.5px;
+    border-color:#ed1c24 transparent transparent transparent}
+.left-buy .buy.down{color:#ed1c24}.left-buy .buy.up{color:#29a643}
+.left-buy .change{float:left;margin:21px 21px 0 14px}.left-buy .change 
+.label{font:1.571em/1.0909em Arial,Helvetica,sans-serif;color:#29a643}
+.left-buy .change .label em{font-style:normal}
+.left-buy .change.down .label em,.left-buy .change.down .label{color:#ed1c24}
+
+.button-row{position:relative;height:54px;width:100%;margin:0 0 5px;padding:14px 0 0 0}
+.button-row a{display:block;height:100%}.button-row a:hover{text-decoration:none}
+.button-row .sell,.button-row .buy{position:relative;width:34.5%;
+                                   float:left;vertical-align:top;cursor:pointer;
+                                   font:0.857em/18px Arial,Helvetica,sans-serif;color:#fff;text-transform:uppercase;
+                                   text-align:left}.button-row .sell>span,.button-row .buy>span{padding:5px 0 4px 9px;
+                                                             display:block;background:#fff;position:relative;z-index:2}
+.button-row .buy>span{padding:5px 13px 4px 0}.button-row .buy{text-align:right;float:right}
+.button-row .up .buy_value,.button-row .up .sell_value,.button-row .up{border:1px solid #29a643;
+                                                                       color:#29a643}
+.button-row .down .buy_value,.button-row .down .sell_value,.button-row .down{border:1px solid #ed1c24;
+                                                                             color:#ed1c24}.button-row .down,.button-row .up{border-bottom:0}
+.button-row .arrow{position:absolute;background:url(../images/icons.png) -862px -272px no-repeat;
+                   width:14px;height:8px;top:9px;padding:0!important}
+.button-row .buy .arrow{left:9px}.button-row .up .arrow{background-position:-876px -272px}
+.button-row .sell .arrow{right:9px}.button-row .down .arrow{background-position:-862px -272px}
+.button-row .sell .bottom-corner{left:2px}.button-row .bg_color{background:#fff}
+.button-row .middle_col{display:inline-block;width:29%;
+                        vertical-align:top;font:1.714em/1.083em Arial,Helvetica,sans-serif;color:#5f6e76;
+                        text-align:center}
+.button-row .middle_col div{display:inline;background:none}
+.button-row .sell_value,.button-row .buy_value{background:inherit;position:absolute;top:26px;
+                                               width:140%;z-index:1;min-height:26px}.button-row .buy_value{right:-1px}
+.button-row .sell_value{left:-1px}
+.button-row .sell_value>div,.button-row .buy_value>div{position:relative;
+                                                       font:1.667em/1.1em Arial,Helvetica,sans-serif;left:8px}
+.button-row .sell_value>div .big,.button-row .buy_value>div .big{font-size:1.3em}
+.button-row .buy_value>div{right:8px;left:auto}
+
+
+
+.left-buy{padding:0 0 20px}
+
+/*Bảng giá vàng thế giới ------------------------------- */
+
+.title-bang-gia{
+    font-size: 20px;
+    font-weight: bold;
+    color: #F00; 
+    margin-bottom: 5px;
+}
+.ads-main{
+    margin-bottom: 3px;
+}

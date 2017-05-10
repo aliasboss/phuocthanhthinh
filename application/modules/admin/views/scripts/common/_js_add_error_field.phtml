@@ -1,0 +1,12 @@
+<script type="text/javascript">
+$(function(){
+	<?php if(isset($this->field_error) && $this->field_error !=''):?>
+		var list_field='<?php echo $this->field_error;?>';
+		var array = list_field.split(",");
+		for(var i=0; i<array.length; i++){
+			$("[name="+array[i]+"]").parent("div").parent("div").addClass("error");
+		}
+		
+	<?php endif;?>
+});
+</script>

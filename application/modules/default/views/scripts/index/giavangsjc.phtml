@@ -1,0 +1,41 @@
+<style>
+  .td-weight{
+    font-weight: bold;
+  }
+</style>
+
+<?php if($this->data): ?>
+
+<div class="box-header">GIÁ VÀNG TẠI CÔNG TY SJC TPHCM</div>
+<div class="box-content">
+  <div >Thời gian cập nhật: <?= $this->data['updated'] ?></div>
+  <div>Đơn vị: <?= $this->data['unit'] ?></div>
+
+
+  <table class="table table-bordered table-condensed table-striped">
+    <thead>
+      <tr style="background-color: #4070FF;">
+        <th>Loại vàng</th>
+        <th>Mua</th>
+        <th>Bán</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php $stt=0; foreach($this->data['city'] as $item): ?>
+      <tr class="info">
+        <td colspan="3" style="text-align: center; font-weight: bold; text-decoration: underline;"><?= $item['name'] ?></td>     
+      </tr>
+
+          <?php foreach($item['item'] as $gia): ?>
+          <tr>
+            <td><?= $gia['type'] ?></td>
+            <td <?php if($stt==0 || $stt==3) echo 'class="td-weight"'; ?> style="color: #0055A8;"><?= $gia['buy'] ?></td>
+            <td <?php if($stt==0 || $stt==3) echo 'class="td-weight"'; ?> style="color: #EA151E;"><?= $gia['sell'] ?></td>
+          </tr>
+          <?php $stt++; endforeach; ?>
+          <?php if($item['name'] == 'Hồ Chí Minh') break; ?>
+        <?php  endforeach; ?>
+    </tbody>
+  </table>
+</div>
+<?php endif; ?>

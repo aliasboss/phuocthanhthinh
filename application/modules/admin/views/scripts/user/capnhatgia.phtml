@@ -1,0 +1,72 @@
+<style>
+
+  </style>
+
+<?php
+$properties = $this->properties;
+$perpage = Zend_Registry::get('perpage');
+$section = $this->section;
+$link = $this->link;
+?>
+<link href="<?php echo NHK_URL::getLinkPublic("css") ?>/list.css" media="screen" rel="stylesheet" type="text/css" />
+<!--header-->
+<div class="page-header">
+  <div class="title">
+      <h1>Cập nhật giá</h1>
+  </div>
+  
+  <div class="row"></div>
+</div>
+<!--/header-->
+
+<form id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/capnhatgia">
+
+    <table>
+        <tr>
+            <th>Loại vàng</th>
+            <th>Mua</th>
+            <th>Bán</th>
+        </tr>
+        <tr>
+            <th>Bóng phân</th>
+            <td>
+                <input name="bongphanmua" type="input" />
+            </td>
+            <td>
+                <input name="bongphanban" type="input" />
+            </td>
+        </tr>
+        <tr>
+            <th>Bóng đẹp</th>
+            <td>
+                <input name="bongdepmua" type="input" />
+            </td>
+            <td>
+                <input name="bongdepban" type="input" />
+            </td>
+        </tr>
+        <tr>
+            <th>K18 (NT)</th>
+            <td>
+                <input name="ngoaitemua" type="input" />
+            </td>
+            <td>
+                <input name="ngoaiteban" type="input" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button>Cập nhật</button>
+                
+            </td>
+        </tr>
+    </table>
+        
+        
+</form>
+
+
+
+
+
+

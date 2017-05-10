@@ -1,0 +1,48 @@
+
+<ul class="nav">
+    <li <?php if ($this->menu == 'home') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerDefault('index') ?>">  Trang chủ</a></li>
+    <li <?php if ($this->menu == 'news') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerDefault('news') ?>">   Tin Tức -  Sự Kiện</a></li>
+    <li <?php if ($this->menu == 'event') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerDefault('event') ?>">   Tin Tức Trong Hội</a></li>
+    <li <?php if ($this->menu == 'about') echo 'class="active"'; ?>><a href="<?= NHK_URL::getLinkControllerDefault('about') ?>">  Liên Hệ</a></li>
+    <?php if (User::is_login() && NHK_Auth::getUser()->user_type == 2) { ?>
+<!--    <li  class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thống Kê <b class="caret"></b></a>
+        <ul class="dropdown-menu">-->
+            <li><a href="<?= NHK_URL::getLinkControllerDefault('user') ?>/thong-ke-tai-khoan">Thống kê Tài Khoản</a></li>
+            <li><a href="<?= NHK_URL::getLinkControllerDefault('banner') ?>">Thống kê Banner</a></li>
+<!--        </ul>
+    </li>-->
+    <?php } ?>
+
+<!--    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li class="nav-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+        </ul>
+    </li>-->
+</ul>
+<?php if (User::is_login()) { ?>
+
+    <p style="margin-left: 10px;" class="navbar-text pull-right">
+        <a href="<?php echo NHK_URL::getLinkControllerDefault('index') . '/logout/' ?>" class="navbar-link">Đăng xuất</a>
+    </p>
+    <p style="margin-left: 10px;" class="navbar-text pull-right">
+        |
+    </p>
+    <p class="navbar-text pull-right">    
+        <?php $date_exp = new DateTime(NHK_Auth::getUser()->time_expired); ?>
+         <a target="_blank" href="<?= NHK_URL::getLinkControllerDefault('index') ?>/info/id/<?php echo NHK_Auth::getUser()->id; ?>" class="navbar-link"><?php echo NHK_Auth::getUser()->fullname; ?></a> . Hết hạn: <?= $date_exp->format("d-m-Y") ?> 
+    </p>    
+<?php } else { ?>
+    <form action="<?php echo NHK_URL::getLink("root") ?>/index/login" method="post"  class="navbar-form pull-right">
+        <input class="span2" name="username" type="text" placeholder="Tài Khoản">
+        <input class="span2" name="password" type="password" placeholder="Mật Khẩu">
+        <button type="submit" class="btn btn-danger">Đăng Nhập</button>
+    </form>
+<?php } ?>

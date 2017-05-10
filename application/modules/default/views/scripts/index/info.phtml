@@ -1,0 +1,122 @@
+<div class="box">
+
+<div class="box-header">THÔNG TIN TÀI KHOẢN</div>
+<div class="box-content">
+  <?php if($this->data): ?>
+  <table style="width: 500px;" class="table table-hover">
+    <tr>
+      <th>Tài khoản:</th>
+      <td><?= $this->data->username ?></td>
+    </tr>
+    <tr>
+      <th>Địa chỉ:</th>
+      <td><?= $this->data->address ?></td>
+    </tr>
+    <tr>
+      <th>Điện thoại:</th>
+      <td><?= $this->data->phone ?></td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td><?= $this->data->email ?></td>
+    </tr>
+     <?php $date_exp = new DateTime($this->data->time_expired);?>
+    <tr>
+      <th>Ngày hết hạn sư dụng:</th>
+      <td><?= $date_exp->format("d-m-Y") ?></td>
+    </tr>
+    <tr>
+      <th>Thay đổi mật khẩu:</th>
+      <td><button id="btn_change_pass" class="btn btn-primary" ><i class="icon-refresh icon-white" ></button></td>
+    </tr>
+  </table>
+  <?php endif; ?>
+  
+  
+</div>
+
+</div>
+
+<div id="modal_add" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a class="btn close" aria-hidden="true" data-dismiss="modal">x</a>
+    <h3 id="myModalLabel">Thay đổi mật khẩu</h3>
+  </div>
+  <form id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerDefault('index') ?>/changepass">
+    <div class="modal-body">
+
+      <input type="hidden" id="id" name="id" value="<?= $this->data->id ?>" />
+      <p id="info_edit" class="text-error lead" align="center"></p>
+      <div class="form-horizontal">
+        
+        <?php 
+            echo NHK_Helper::form_item_input('Mật khẩu cũ', 
+                                              'password', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input('Mật khẩu mới', 
+                                              'passnew', 
+                                              $this->params, 'text', "input-xlarge");
+            echo NHK_Helper::form_item_input('Nhập lại mật khẩu mới', 
+                                              'passnewconfirm', 
+                                              $this->params, 'text', "input-xlarge");
+            
+        ?>
+      </div>
+
+
+
+      <div id="errorModal" style="display: none;" class="alert alert-error">
+        <h4>Error</h4>
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("close"); ?></a>
+      <button type="submit" id="btnSubmit" class="btn btn-primary"><?php echo NHK_Properties::get("save")?></button>
+    </div>
+  </form>
+</div>
+<script src="<?php echo NHK_URL::getLinkPublic("js") ?>/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#btn_change_pass").click(function(){
+      $("#modal_add").modal('show');
+  });
+  
+  
+  
+  
+  $("#myForm").live('submit',function(){
+       $("#errorModal").hide();
+       var url_post = $(this).attr('action');
+        $.post(url_post, $(this).serialize(), function(res){
+            var json_obj = JSON.parse(res);
+            
+            if(json_obj.status == 'success'){
+                
+                $("#modal_add").modal('hide');
+            }else{
+                $(".control-group").removeClass('error');
+                if(json_obj.method == 'validate'){
+                    $('#errorModal ul').html('');
+                     for(var key in json_obj.error){
+                         $("#"+key).parent().parent().addClass('error');
+                        for(var index in json_obj.error[key]){
+                            $('#errorModal ul').append("<li>"+json_obj.error[key][index]+"</li>");
+                        }
+                     }
+                }else{
+                    $('#errorModal ul').html("<li>"+json_obj.error+"</li>");
+                }
+                $("#errorModal").show();
+            }
+        });
+        return false;
+   });
+  
+  
+});
+
+</script>

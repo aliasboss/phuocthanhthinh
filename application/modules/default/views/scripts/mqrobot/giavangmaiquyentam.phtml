@@ -1,0 +1,87 @@
+<?php
+$data = $this->data;
+    //$mq75 = $this->data_mq75;
+ // $banra = round((round(($mq75["f"]["b"]/9980)*1000,0) + 5)*0.7050,0)*10;
+    $banra = round($data['bongdepban'] *0.7050,0);
+//  $muavao = round(round(($mq75["9t5"]["m"]/950)*100,0) * 67 /100,0)*10;
+?>
+<div class="box-header">GIÁ VÀNG TẠI TIỆM VÀNG <?= NHK_Properties::get('cty') ?></div>
+<div class="box-content">
+  <div style="margin: 10px 0px 10px 0px; font-size: 16px; font-weight: bold;">Thời gian cập nhật: <?= date('d-m-Y H:i:s') ?></div>
+  <div style="float: left;">
+     <table width="300" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" style="BORDER-COLLAPSE: collapse">
+    <tr>
+      <td height="30" colspan="5" align="center" bgcolor="#CC0000"><span class="titletext1"><font color="#FEFF80"><strong>GIÁ VÀNG</strong></font></span></td>
+    </tr>
+    <tr>
+      <td width="100" height="30" align="center" bgcolor="#FEFF80"><span class="menutext">LOẠI</span></td>
+      <td width="100" align="center" bgcolor="#FEFF80"><span class="menutext">MUA V&Agrave;O </span></td>
+      <td width="100" align="center" bgcolor="#FEFF80"><span class="menutext">B&Aacute;N RA </span></td>
+    </tr>
+    <tbody>
+<tr style="HEIGHT: 25px; BACKGROUND-COLOR:#e3dfdf">
+<th width="100" height="25" align="center" valign="middle" class="contenttextb">Bóng phân</th>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $data['bongphanmua']?>  </td>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $data['bongphanban']?>  </td>
+          </tr>
+<tr style="HEIGHT: 25px;">
+<th width="100" height="25" align="center" valign="middle" class="contenttextb">Bóng đẹp</th>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $data['bongdepmua']?>  </td>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $data['bongdepban']?>  </td>
+          </tr>
+
+<td height="5" align="center" valign="middle" bgcolor="#FFFF66"></td>
+            <td height="5" align="center" valign="middle" bgcolor="#FFFF66"></td>
+            <td height="5" align="center" valign="middle" bgcolor="#FFFF66"></td>
+          </tr>
+</tbody>
+    </table>   
+  </div>
+  <div style="float: left; margin-left: 20px;">
+    <table width="300" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" style="BORDER-COLLAPSE: collapse">
+    <tr>
+      <td height="30" colspan="5" align="center" bgcolor="#CC0000"><span class="titletext1"><font color="#FFFFFF">NGO&#7840;I T&#7878;</font></span></td>
+    </tr>
+    <tr>
+      <td width="100" height="30" align="center" bgcolor="#FEFF80"><span class="menutext">LOẠI</span></td>
+      <td width="100" align="center" bgcolor="#FEFF80"><span class="menutext">MUA V&Agrave;O </span></td>
+      <td width="100" align="center" bgcolor="#FEFF80"><span class="menutext">B&Aacute;N RA </span></td>
+    </tr>
+     <tr style="HEIGHT: 25px; BACKGROUND-COLOR:#e3dfdf">
+<th width="100" height="25" align="center" valign="middle" class="contenttextb">K18 (NT)</th>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $data['ngoaitemua']?>  </td>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $data['ngoaiteban']?>  </td>
+          </tr>
+    </table>
+       
+  </div>
+  <div style="float: left; margin-left: 20px;">
+    <table width="300" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" style="BORDER-COLLAPSE: collapse">
+    <tr>
+      <td height="30" colspan="5" align="center" bgcolor="#CC0000"><span class="titletext1"><font color="#FEFF80"><strong>GIÁ VÀNG MQ75(16K) HÔM NAY</strong></font></span></td>
+    </tr>
+    <tr>
+      <td width="100" height="30" align="center" bgcolor="#FEFF80"><span class="menutext">LOẠI</span></td>
+      <td width="100" align="center" bgcolor="#FEFF80"><span class="menutext">MUA V&Agrave;O </span></td>
+      <td width="100" align="center" bgcolor="#FEFF80"><span class="menutext">B&Aacute;N RA </span></td>
+    </tr>
+   
+    <tbody>
+<tr style="HEIGHT: 25px; BACKGROUND-COLOR:#e3dfdf">
+<td width="100" height="25" align="center" valign="middle" class="contenttextb">mq75</td>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb">   </td>
+            <td width="100" height="25" align="right" valign="middle" class="contenttextb"> <?= $banra?>  </td>
+          </tr>
+
+<td height="5" align="center" valign="middle" bgcolor="#FFFF66"></td>
+            <td height="5" align="center" valign="middle" bgcolor="#FFFF66"></td>
+            <td height="5" align="center" valign="middle" bgcolor="#FFFF66"></td>
+          </tr>
+</tbody>
+    </table>        
+  </div>
+  <div class="row">
+    
+  </div>
+</div>
+

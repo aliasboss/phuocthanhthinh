@@ -1,0 +1,193 @@
+
+<style>
+    table.table-bang-gia-ca-mau td{
+        font-size: 24px;
+    }
+    .giasjc{
+        background-color: #e6e6e6;
+    }
+    .giasjc td{
+        color: #008000;
+    }
+</style>
+<div class="box-header">
+    BẢNG GIÁ VÀNG HỘI MỸ NGHỆ KIM HOÀN TỈNH CÀ MAU
+</div>
+
+<div class="box-content row">       
+    <div class="span5 banggiacamau_left">
+
+        <div class="title-bang-gia">BẢNG GIÁ HỘI KIM HOÀN CÀ MAU</div>
+        <div id="time_update" class="content1">
+            Cập nhật vào lúc 21:09:01 23/03/2017        </div>
+        <div>
+            Đơn vị tính : <span style="color:#F00">Đồng/Chỉ</span>
+        </div>
+        <div style="color:#F00; font-size: 13px; padding: 10px">
+            KHÁCH HÀNG LƯU Ý: Những món hàng mà Quý khách mua không đóng dấu chất lượng phần trăm (%) 
+            trên sản phẩm và bán không đúng theo bảng giá, đều không đảm bảo chất lượng.
+        </div>
+        <table width="100%" class="table-bang-gia-ca-mau table table-bordered">
+            <thead>
+                <tr>
+                    <th>Loại</th>
+                    <th style="width:75px;">Chất Lượng ‰</th>
+                    <th>Mua Vào</th>
+                    <th>Bán Ra</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Vàng 24K</th>
+                    <td class="loai_vang">999</td>
+                    <td id='v999_m'><?= $this->data['v999']['m'] ?></td>
+                    <td id='v999_b'><?= $this->data['v999']['b'] ?></td>
+                </tr>
+                <tr>
+                    <th>Nữ Trang</th>
+                    <td class="loai_vang">980</td>
+                    <td id='v980_m'><?= $this->data['v980']['m'] ?></td>
+                    <td id='v980_b'><?= $this->data['v980']['b'] ?></td>
+                </tr>
+                <tr>
+                    <th>Nữ Trang</th>
+                    <td class="loai_vang">960</td>
+                    <td id='v960_m'><?= $this->data['v960']['m'] ?></td>
+                    <td id='v960_b'><?= $this->data['v960']['b'] ?></td>
+                </tr>
+                <tr class="vang18k">
+                    <th>Nữ Trang</th>
+                    <td class="loai_vang">750</td>
+                    <td id='v750_m'><?= $this->data['v750']['m'] ?></td>
+                    <td id='v750_b'><?= $this->data['v750']['b'] ?></td>
+                </tr>
+                <tr>
+                    <th>Nữ Trang</th>
+                    <td class="loai_vang">680</td>
+                    <td id='v680_m'><?= $this->data['v680']['m'] ?></td>
+                    <td id='v680_b'><?= $this->data['v680']['b'] ?></td>
+                </tr>
+                <tr>
+                    <th>Nữ Trang</th>
+                    <td class="loai_vang">610</td>
+                    <td id='v610_m'><?= $this->data['v610']['m'] ?></td>
+                    <td id='v610_b'><?= $this->data['v610']['b'] ?></td>
+                </tr>
+                <tr>
+                    <th>Nữ Trang</th>
+                    <td class="loai_vang">585</td>
+                    <td id='v585_m'><?= $this->data['v585']['m'] ?></td>
+                    <td id='v585_b'><?= $this->data['v585']['b'] ?></td>
+                </tr>
+                <tr class="giasjc">
+                    <th >SJC</th>
+                    <td class="loai_vang">9999</td>
+                    <td id='sjc_m'><?= $this->data['sjc']['m'] ?></td>
+                    <td id='sjc_b'><?= $this->data['sjc']['b'] ?></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div style="text-align: center;">
+            <a href="<?= NHK_URL::getLinkControllerDefault('lichsugiavang') ?>" title="Lịch Sử Giá Vàng">Xem Lịch Sử Giá Vàng</a>
+        </div>
+    </div>
+    <div class="banggiacamau_right">
+        <div class="ads_1">
+            <br /><br />
+            Banner Quảng Cáo
+            <br />
+            180x200
+            <br/>
+            Mr. Khánh - 0918.355.155
+            <br/>
+            1
+            <!--<img width="180" src="<?php echo NHK_URL::getLinkPublic("img") ?>/ads/aaaaa.gif" title="Tiệm Vàng Nguyễn Linh" />-->
+        </div>
+        <div class="ads_1">
+            <br /><br />
+            Banner Quảng Cáo
+            <br />
+            180x200
+            <br/>
+            Mr. Khánh - 0918.355.155
+            <br/>
+            2
+        </div>
+
+        <div style="clear: both;"></div>
+    </div>
+
+
+
+
+</div>
+
+<!--    
+  
+        <div class="border1">
+            <div class="banggiavang">
+            <table class="table_gia" border="1">
+                <thead>
+                    <tr>
+                        <th>Loại</th>
+                        <th>Chất Lượng ‰</th>
+                        <th>Mua Vào</th>
+                        <th>Bán Ra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Vàng 24K</th>
+                        <td class="loai_vang">999</td>
+                        <td id='v999_m'><?= $this->data['v999']['m'] ?></td>
+                        <td id='v999_b'><?= $this->data['v999']['b'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nữ Trang</th>
+                        <td class="loai_vang">980</td>
+                        <td id='v980_m'><?= $this->data['v980']['m'] ?></td>
+                        <td id='v980_b'><?= $this->data['v980']['b'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nữ Trang</th>
+                        <td class="loai_vang">960</td>
+                        <td id='v960_m'><?= $this->data['v960']['m'] ?></td>
+                        <td id='v960_b'><?= $this->data['v960']['b'] ?></td>
+                    </tr>
+                    <tr class="vang18k">
+                        <th>Nữ Trang</th>
+                        <td class="loai_vang">750</td>
+                        <td id='v750_m'><?= $this->data['v750']['m'] ?></td>
+                        <td id='v750_b'><?= $this->data['v750']['b'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nữ Trang</th>
+                        <td class="loai_vang">680</td>
+                        <td id='v680_m'><?= $this->data['v680']['m'] ?></td>
+                        <td id='v680_b'><?= $this->data['v680']['b'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nữ Trang</th>
+                        <td class="loai_vang">610</td>
+                        <td id='v610_m'><?= $this->data['v610']['m'] ?></td>
+                        <td id='v610_b'><?= $this->data['v610']['b'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nữ Trang</th>
+                        <td class="loai_vang">585</td>
+                        <td id='v585_m'><?= $this->data['v585']['m'] ?></td>
+                        <td id='v585_b'><?= $this->data['v585']['b'] ?></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            </div>
+            
+        </div>
+
+
+
+
+-->
+

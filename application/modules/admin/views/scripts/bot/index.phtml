@@ -1,0 +1,38 @@
+<?php
+$properties = $this->properties;
+$perpage = Zend_Registry::get('perpage');
+$section = $this->section;
+$link = $this->link;
+?>
+<!--header-->
+<div class="page-header">
+  <div class="title">
+      <h1><?php echo NHK_Properties::get("title", $section, $properties); ?></h1>
+  </div>
+  <div class="row"></div>
+</div>
+<!--/header-->
+
+<!--search-->
+
+<div class="container">
+  <a class="btn" target="_blank" href="<?= NHK_URL::getLink('24h') ?>" title="Lấy tin tại trang web vang-24h.com" >Lấy tin tại trang web vang-24h.com</a>
+  <a class="btn" target="_blank" href="<?= NHK_URL::getLink('vietstock') ?>" title="Lấy tin tại trang web vietstock.vn" >Lấy tin tại trang web vietstock.vn</a>
+</div>
+
+<!--/search-->
+
+
+
+<div style="display:none; text-align: center;">
+  <img id="loading" src="<?php echo NHK_URL::getLinkPublic('img') . '/ajax-loader.gif' ?>" alt="loading"  />
+</div>
+
+
+
+<script type="text/javascript">
+  var url = '<?php echo NHK_URL::getLinkControllerAdmin($link); ?>';
+  $(document).ready(function() {
+
+  });
+</script>

@@ -1,0 +1,43 @@
+<?php $stt = $this->itemPerPage * ($this->current_page-1);
+foreach ($this->data as $item) { ?>
+  <tr>
+    <td class="cCheckBox" style="text-align:center;"><input class="cb_select" value="<?php echo $item['id']; ?>" type="checkbox" /></td>
+    <td class="cOrder" style="text-align:center;"><?php echo $stt + 1; ?></td>
+    <td class="c1 txt_bold">
+        <?php if(date("Y-m-d") == date("Y-m-d",strtotime($item['created_at']))): ?>
+      <img src="<?= NHK_URL::getLink('img') ?>/new_small.gif" />
+        <?php endif; ?>
+      <?php echo $item['title']; ?>
+    </td>
+    <td class="c2 txt_center">
+        <?php if($item['thumb_img']!=''): ?>
+      <img title="<?= $item['title'] ?>" src="<?= $item['thumb_img'] ?>" width="100" height="100" />
+          <?php else: ?>
+      Chưa có hình ảnh
+        <?php endif; ?>
+    </td>
+    <td class="c3"><?php echo $item['short_des']; ?></td>
+    <td class="c4"><?php echo $item['created_at']; ?></td>
+    <td class="cFunc" style="text-align:center;">
+      <div class="btn-group">
+        <a title="Thay đổi thông tin" class="btn btn-small btn-success" href="<?= NHK_URL::getLinkControllerAdmin($this->link) ?>/add/id/<?= $item['id'] ?>"> <i class="icon-edit icon-white"></i></a>
+        <a title="Xóa" key="<?php echo $item['id']; ?>" class="btn btn-small btn-danger group_btn_delete" href="javascript:"> <i class="icon-trash icon-white"></i></a>
+      </div>
+    </td>
+  </tr>
+  <?php $stt++;
+} ?>
+
+<input id="pagination" type="hidden" value='<?php echo $this->paginationControl($this->paginator, 'Sliding', 'common/pagination.phtml'); ?>' />
+
+<script type="text/javascript">
+
+  $("#pagination_bottom").html($("#pagination").val());
+  $("#current_page").val('<?=$this->current_page?>');
+  
+  //$("#total").html('<?php echo $this->total; ?>');
+
+//  $("#content").show();
+//  $("#loading").hide();
+
+</script>

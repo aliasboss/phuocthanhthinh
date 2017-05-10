@@ -1,0 +1,17 @@
+<div id="modal_delete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+
+    <input type="hidden" id="key_delete" value="" />
+    <p align="center" class="text-warning"><?php echo NHK_Properties::get("confirm_delete", 'user', $this->properties); ?></p>
+    <p align="center" id="info_delete" class="lead"></p>
+
+  </div>
+  <div class="modal-footer">
+    <div style="margin: auto; text-align: center;">
+      <button type="submit" id="btnDeleteOk" class="btn btn-primary" style="width: 70px;"><?php echo NHK_Properties::get("ok", 'public'); ?></button>
+      <a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("cancel", 'public'); ?></a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+</div>

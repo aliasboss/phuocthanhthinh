@@ -1,0 +1,105 @@
+<style>
+    .thongkeuser li{
+        font-size: 18px; 
+        font-weight: bold;
+        color: #0000ff;
+    }
+    .bg_con_han{
+        background-color: #f7a922;
+    }
+    
+    .bg_gia_han{
+        background-color: #006dcc;
+    }
+</style>
+
+<div class="box">
+    <div class="box-header">Thống Kê Tài Khoản</div>
+    <div class="box-content">
+        <ul class="thongkeuser">
+            <li>Có Tất cả <?= count($this->data) ?> Tài Khoản</li>
+            <li>Có <span id="li_so_luong_con_han"></span> tài khoản còn hạn</li>
+            <li>Có <?= $this->countUserActive ?> Tài Khoản gia hạn trong Tháng.</li>
+
+        </ul>
+        
+        <table >
+            <tr>
+                <td class="bg_con_han">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Tài khoản hết hạn Hoặc bị khóa</td>
+            </tr>
+<!--            <tr>
+                <td class="bg_gia_han">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Tài khoản gia hạn trong tháng</td>
+            </tr>-->
+        </table>
+
+
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tài Khoản</th>
+                    <th>Địa Chỉ</th>
+                    <th>Điện thoại</th>
+                    <th>Ngày Gia Hạn</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Số ngày còn lại</th>
+                    <th width="220">Ghi Chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $stt = 1;
+                $so_tk_con_han = 0;
+                
+                foreach ($this->data as $item):
+                    $class_con_han = '';
+                    $class_gia_han = '';
+                    $songayconlai = (strtotime($item->time_expired) - strtotime(date("Y-m-d"))) / 86400;
+                    if ($songayconlai < 0 ){
+                        $songayconlai = 0;
+                        $class_con_han = 'class="bg_con_han"';
+                    }
+                    else {
+                        if($item->status ==1){
+                            $class_con_han = 'class="bg_con_han"';
+                        }
+                        $so_tk_con_han += 1;
+                        
+                    }
+//                    if(date("m-Y", strtotime($item->date_active)) == date("m-Y"))
+//                            $class_gia_han= 'class="bg_gia_han"';
+                    ?>
+                    <tr>
+                        <td><?= $stt ?></td>
+                        <td <?=$class_con_han?>><?= $item->username ?></td>
+                        <td><?= $item->address ?></td>
+                        <td><?= $item->phone ?></td>
+                        <td <?=$class_gia_han?>><?= date("d-m-Y", strtotime($item->date_active)) ?></td>
+                        <td><?= date("d-m-Y", strtotime($item->time_expired)) ?></td>
+                        <td><?= $songayconlai ?></td>
+                        <td><?= $item->note ?></td>
+
+                    </tr>
+                    <?php $stt = $stt + 1;
+                endforeach;
+                ?>
+            <input type="hidden" id="so_luong_con_han" value="<?= $so_tk_con_han ?>" />
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+
+
+
+    $(document).ready(function () {
+        $("#li_so_luong_con_han").html($("#so_luong_con_han").val());
+    });
+</script>
+
+

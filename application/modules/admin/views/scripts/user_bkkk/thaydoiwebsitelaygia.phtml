@@ -1,0 +1,43 @@
+<style>
+
+  </style>
+
+<?php
+$properties = $this->properties;
+$perpage = Zend_Registry::get('perpage');
+$section = $this->section;
+$link = $this->link;
+?>
+<link href="<?php echo NHK_URL::getLinkPublic("css") ?>/list.css" media="screen" rel="stylesheet" type="text/css" />
+<!--header-->
+<div class="page-header">
+  <div class="title">
+      <h1>Thay đổi trang web lấy giá</h1>
+  </div>
+  
+  <div class="row"></div>
+</div>
+<!--/header-->
+
+<form id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/thaydoiwebsitelaygia">
+
+    <tr>
+        <td> <input <?php if($this->config['config_val']==1 ) echo "checked"; ?> type="radio" name="web" value="1" /> Web taiem.com </td>
+         <td> <input <?php if($this->config['config_val']==0 ) echo "checked"; ?> type="radio" name="web" value="0" /> Web ngoaite.phuthinh.com.vn </td>
+    </tr>       
+        <tr>
+            <td colspan="2">
+                <button>Cập nhật</button>
+                
+            </td>
+        </tr>
+    </table>
+        
+        
+</form>
+
+
+
+
+
+

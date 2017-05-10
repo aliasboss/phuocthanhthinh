@@ -1,0 +1,58 @@
+<link href="<?php echo NHK_URL::getLinkPublic("css")?>/login_default.css" media="screen" rel="stylesheet" type="text/css" />
+
+<div class="container">
+    <form class="form-signin" style="width: 600px;" method="post" action="<?php echo NHK_URL::getLink("root")?>/index/login">
+    <h2 class="form-signin-heading">Đăng nhập để vào website</h2>
+    
+
+	<?php if(isset($this->result) && $this->result){
+	?>	
+		<div class="error_alert alert alert-block alert-error fade in">
+			<button type="button" class="close" data-dismiss="alert">×</button>
+			<?=$this->result;?>
+		</div>
+		<script>
+			$(".alert").alert();
+		</script>
+	<?php 
+		}
+	?>
+	
+	
+	<?php echo NHK_Helper::form_item_input("Tài khoản", "username", $this->params,"text"); ?>
+	
+	<?php echo NHK_Helper::form_item_input("Mật khẩu", "password", $this->params, "password"); ?>
+
+        <div style="text-align: right;">
+            <!--<a href="<?php echo NHK_URL::getLink("root")?>/index/forgot">Forgot password</a>-->
+        </div>
+        <div>
+             <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+        </div>
+        
+    <!--label class="checkbox">
+      <input type="checkbox" value="remember-me"> Remember me
+    </label-->
+   
+  </form>
+  <?php if(isset($this->errors)): ?>
+  <div id="errorModal" class="alert alert-error">
+    <h4>Error</h4>
+      <?php //print_r($this->error); ?>
+    <ul>
+        <?php foreach($this->errors as $k=>$v): ?>
+      <li>
+          <?= $k ?>
+        <ul>
+              <?php foreach($v as $item): ?>
+          <li><?= $item ?></li>
+                <?php endforeach; ?>
+        </ul>
+      </li>
+      
+        <?php endforeach; ?>
+    </ul>
+  </div>
+  <?php endif; ?>
+   <?php //echo $this -> render('common/_error_handle.phtml'); ?>
+</div> <!-- /container -->

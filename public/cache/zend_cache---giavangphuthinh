@@ -1,0 +1,18 @@
+s:3092:"<table id="MainContent_goldRateGrid_DXMainTable" class="dxgvTable" cellspacing="0" cellpadding="0" onclick="ASPx.GTableClick('MainContent_goldRateGrid', event);" style="width:100%;border-collapse:collapse;empty-cells:show;"><tr id="MainContent_goldRateGrid_DXHeadersRow0"><td id="MainContent_goldRateGrid_col0" class="dxgvHeader" onmousedown="ASPx.GHeaderMouseDown('MainContent_goldRateGrid', this, event);" style="width:40%;text-align:Center;border-top-width:0px;border-left-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;"><tr><td style="text-align:Center;">Tên Vàng</td>
+<td style="width:1px;text-align:right;"><span class="dx-vam"> </span></td></tr></table></td>
+<td id="MainContent_goldRateGrid_col1" class="dxgvHeader" onmousedown="ASPx.GHeaderMouseDown('MainContent_goldRateGrid', this, event);" style="width:30%;text-align:Center;border-top-width:0px;border-left-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;"><tr><td style="text-align:Center;">Giá Mua Vào</td>
+<td style="width:1px;text-align:right;"><span class="dx-vam"> </span></td></tr></table></td>
+<td id="MainContent_goldRateGrid_col2" class="dxgvHeader" onmousedown="ASPx.GHeaderMouseDown('MainContent_goldRateGrid', this, event);" style="width:30%;text-align:Center;border-top-width:0px;border-left-width:0px;border-right-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;"><tr><td style="text-align:Center;">Giá Bán Ra</td>
+<td style="width:1px;text-align:right;"><span class="dx-vam"> </span></td></tr></table></td></tr>
+<tr id="MainContent_goldRateGrid_DXDataRow0" class="dxgvDataRow" style="background-color:LightCyan;"><td class="dxgv" style="border-bottom-width:0px;">SJC</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-bottom-width:0px;">36560</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-right-width:0px;border-bottom-width:0px;">36640</td></tr>
+<tr id="MainContent_goldRateGrid_DXDataRow1" class="dxgvDataRow"><td class="dxgv" style="border-bottom-width:0px;">95</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-bottom-width:0px;">32260</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-right-width:0px;border-bottom-width:0px;">0</td></tr>
+<tr id="MainContent_goldRateGrid_DXDataRow2" class="dxgvDataRow" style="background-color:LightCyan;"><td class="dxgv" style="border-bottom-width:0px;">BK</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-bottom-width:0px;">0</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-right-width:0px;border-bottom-width:0px;">34120</td></tr>
+<tr id="MainContent_goldRateGrid_DXDataRow3" class="dxgvDataRow"><td class="dxgv" style="border-bottom-width:0px;">US</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-bottom-width:0px;">22785</td>
+<td class="Down dxgv" align="right" style="font-weight:bold;border-right-width:0px;border-bottom-width:0px;">22805</td></tr></table>";

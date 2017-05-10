@@ -1,0 +1,74 @@
+<?php  
+  $data = array('id'=>'',
+                'title'=>'',
+                'thumb_img' =>'',
+                'short_des' =>''
+                );
+  if(isset($this->params)){
+    $data = $this->params;
+  }
+    
+?>
+
+<form class="form-horizontal" id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/add">
+   <div class="modal-footer">
+    <!--<a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("close", 'public', $this->properties); ?></a>-->
+    <button type="submit" class="btn btn-primary"><?php echo NHK_Properties::get("save", 'public', $this->properties); ?></button>
+  </div>
+   <?php if(isset($this->error)): ?>
+  <div id="errorModal" class="alert alert-error">
+    <h4>Error</h4>
+      <?php //print_r($this->error); ?>
+    <ul>
+        <?php foreach($this->error as $k=>$v): ?>
+      <li>
+          <?= $k ?>
+        <ul>
+              <?php foreach($v as $item): ?>
+          <li><?= $item ?></li>
+                <?php endforeach; ?>
+        </ul>
+      </li>
+      
+        <?php endforeach; ?>
+    </ul>
+  </div>
+  <?php endif; ?>
+
+  <input type="hidden" id="id" name="id" value="<?= $this->params['id'] ?>" />
+
+  <?php
+  echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_title", $this->section, $this->properties), 'data[title]', $this->params, 'text', "input-xxlarge",$data['title']);
+  echo NHK_Helper::form_item_input(NHK_Properties::get("title_column_thumb", $this->section, $this->properties), 'data[thumb_img]', $this->params, 'text', "input-xxlarge",$data['thumb_img']);
+  
+  echo NHK_Helper::form_item_textarea(NHK_Properties::get("title_column_short_des", $this->section, $this->properties), "data[short_des]", $this->params,3,30,$data['short_des']); 
+  ?>
+
+  <div class="control-group">
+    <label class="control-label" for="description"><?php echo NHK_Properties::get("title_column_description", $this->section, $this->properties); ?></label>
+    <div class="controls">
+      <textarea id="description" style="height: 400px" name="data[description]">
+  <?php
+  if ($this->params != null && isset($this->params['description']) && $this->params['description'] != '') {
+    echo $this->params['description'];
+  }
+  ?>                
+      </textarea>
+    </div>
+  </div>
+
+
+ <div class="modal-footer">
+    <!--<a class="btn" data-dismiss="modal" aria-hidden="true"><?php echo NHK_Properties::get("close", 'public', $this->properties); ?></a>-->
+    <button type="submit" class="btn btn-primary"><?php echo NHK_Properties::get("save", 'public', $this->properties); ?></button>
+  </div>
+
+ 
+</form>
+
+<script src="<?php echo NHK_URL::getLinkPublic("root") ?>/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    CKEDITOR.replace('description');
+  });
+</script>

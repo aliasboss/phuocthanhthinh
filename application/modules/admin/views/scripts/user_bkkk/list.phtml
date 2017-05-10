@@ -1,0 +1,52 @@
+<?php $stt = $this->itemPerPage * ($this->current_page-1);
+foreach ($this->data as $item) { ?>
+  <tr>
+    <td class="cCheckBox" style="text-align:center;"><input class="cb_select" value="<?php echo $item['id']; ?>" type="checkbox" /></td>
+    <td class="cOrder" style="text-align:center;"><?php echo $stt + 1; ?></td>
+    <td class="c1 txt_bold"><?php echo $item['username']; ?></td>
+    <td class="c2"><?php echo $item['password_show']; ?></td>
+    <td class="c3"><?php echo $item['fullname']; ?></td>
+    <td class="c4"><?php echo $item['phone']; ?></td>
+    <td class="c5 txt_right">
+      <p style="margin: 0 5px 5px 0px;">Ngày active: <?= date('d-m-Y',strtotime($item['date_active'])); ?></p>
+      
+      <p style="margin: 0 5px 5px 0px;">Ngày hết hạn: <strong><?= date('d-m-Y',strtotime($item['time_expired'])); ?></strong></p>
+    </td>
+    <td class="c6 txt_center">
+        <?php  
+            $status = 0;
+            $class = "cbb_active";
+            
+            if($item['status']==1 || time() >  strtotime($item['time_expired'])){
+              $status = 1;
+              $class = "cbb_block";
+            }
+        ?>
+      <select label="<?= $item['username'] ?>" key="<?= $item['id'] ?>" class="cbb_status <?= $class?> input-small">
+        <option <?php if($status == 0) echo 'selected="selected"'; ?> value="0">Active</option>
+        <option <?php if($status == 1) echo 'selected="selected"'; ?> value="1">Block</option>                
+      </select>
+    </td>
+    <td class="cFunc" style="text-align:center;">
+      <div class="btn-group">
+        <a title="Thay đổi thông tin" key="<?php echo $item['id']; ?>" class="btn btn-small btn-success group_btn_edit" href="javascript:"> <i class="icon-edit icon-white"></i></a>
+        <a title="Xóa" key="<?php echo $item['id']; ?>" class="btn btn-small btn-danger group_btn_delete" href="javascript:"> <i class="icon-trash icon-white"></i></a>
+      </div>
+    </td>
+  </tr>
+  <?php $stt++;
+} ?>
+
+<input id="pagination" type="hidden" value='<?php echo $this->paginationControl($this->paginator, 'Sliding', 'common/pagination.phtml'); ?>' />
+
+<script type="text/javascript">
+
+  $("#pagination_bottom").html($("#pagination").val());
+  $("#current_page").val('<?=$this->current_page?>');
+  
+  //$("#total").html('<?php echo $this->total; ?>');
+
+//  $("#content").show();
+//  $("#loading").hide();
+
+</script>

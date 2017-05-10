@@ -1,0 +1,74 @@
+<style>
+
+  </style>
+
+<?php
+$properties = $this->properties;
+$perpage = Zend_Registry::get('perpage');
+$section = $this->section;
+$link = $this->link;
+?>
+<link href="<?php echo NHK_URL::getLinkPublic("css") ?>/list.css" media="screen" rel="stylesheet" type="text/css" />
+<!--header-->
+<div class="page-header">
+  <div class="title">
+      <h1>Đổi Mật Khẩu</h1>
+  </div>
+  
+  <div class="row"></div>
+</div>
+<!--/header-->
+
+
+<form id="myForm" method="post" action="<?php echo NHK_URL::getLinkControllerAdmin($this->link) ?>/capnhatmatkhau">
+    <input type="hidden" name="id" value="<?=$this->info['id']?>" />
+    <table>       
+        <tr>
+            <th>Mật khẩu mới</th>
+            <td>
+                <input id="matkhau1" name="matkhaumoi" type="password" />
+            </td>
+           
+        </tr>
+        <tr>
+            <th>Nhập lại mật khẩu mới</th>
+            <td>
+                <input id="matkhau2" name="matkhaunhaplai" type="password" />
+            </td>
+           
+        </tr>
+        
+        <tr>
+            <td colspan="2">
+                <a href="javascript:" class="btn" id="btnSubmit">Cập Nhật</a>
+                
+            </td>
+        </tr>
+    </table>
+        
+        
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#btnSubmit").click(function(){
+            if($("#matkhau1").val()==""){
+                alert("Vui lòng nhập mật khẩu cần đổi.");
+            }else{
+                if($("#matkhau1").val() != $("#matkhau2").val()){
+                    alert("Mật khẩu nhập lại không đúng");
+                }else{
+                    //alert("fdfdfd");
+                    $("#myForm").submit();
+                }
+            }
+        });
+        //alert("fdfdfd");
+    });
+</script>
+
+
+
+
+
+

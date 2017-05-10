@@ -1,0 +1,24 @@
+
+<div class="row" style="margin-left: 20px;">
+  <div class="span2" style="text-align: right;"><?php echo NHK_Properties::get("title_column_username", $this->section, $this->properties); ?>:</div>
+  <div class="span3"><input key="username" type="text" class="params_search input_search" placeholder="<?php echo NHK_Properties::get("title_column_username", $this->section, $this->properties); ?>"></div>
+
+  <div class="span2" style="text-align: right;"><?php echo NHK_Properties::get("title_column_fullname", $this->section, $this->properties); ?>:</div>
+  <div class="span3"><input key="fullname" type="text" class="params_search input_search" placeholder="<?php echo NHK_Properties::get("title_column_fullname", $this->section, $this->properties); ?>"></div>
+</div>
+
+<div class="row" style="margin-left: 20px;">
+  <div class="span2" style="text-align: right;"><?php echo NHK_Properties::get("title_column_phone", $this->section, $this->properties); ?>:</div>
+  <div class="span3"><input key="phone" type="text" class="params_search input_search" placeholder="<?php echo NHK_Properties::get("title_column_phone", $this->section, $this->properties); ?>"></div>
+
+  <!--  <div class="span2" style="text-align: right;">User bị khóa:</div>
+    <div class="span3">
+      <input id="search_status" key="status" value="1" type="checkbox" class="params_search"  />
+    </div>-->
+</div>
+<div class="button-search">
+  <button id="btn_search" class="btn" type="button">Search</button>
+</div>
+
+
+<div class="clearfix"></div>

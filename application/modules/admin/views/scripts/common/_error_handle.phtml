@@ -1,0 +1,27 @@
+<?php if($this->errors):?>
+
+	<script type="text/javascript">
+    
+    $(function(){
+            <?php foreach($this->errors as $key_name => $values){ ?>
+                add_error_key('<?php echo $key_name ?>');
+                <?php
+                    $message = '<span class="help-inline">';
+                    foreach($values as $k => $msg){
+                        if($k != count($values)-1 )
+                            $message.= $msg."<br/>";
+                        else
+                            $message.= $msg;   
+                    }
+                    $message .= "<span>";
+                ?>
+                add_error_message('<?php echo $key_name; ?>', '<?php echo addslashes($message);?>');
+            <?php
+            }
+            ?>
+    
+    
+    });
+    
+    </script>
+<?php endif;?>

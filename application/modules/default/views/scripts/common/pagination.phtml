@@ -1,0 +1,15 @@
+<div class="pagination pagination-small">
+    <ul>
+      <li class="<?php if (!isset($this->previous)) echo 'disabled';?>"><a href="javascript:" <?php if(isset($this->previous)) echo 'onclick="loadPage('.$this->previous.')"';?>>Prev</a></li>
+      <?php
+          foreach ($this->pagesInRange as $page){
+             if ($page != $this->current){                   
+                  echo '<li><a href="javascript:" onclick="loadPage('.$page.')">'.$page.'</a></li>';
+            }else{
+                  echo '<li class="active"><a href="javascript:">'.$page.'</a></li>';
+            }
+         }
+      ?>        
+      <li class="<?php if (!isset($this->next)) echo 'disabled';?>"><a href="javascript:" <?php if(isset($this->next)) echo 'onclick="loadPage('.$this->next.')"';?>>Next</a></li>
+    </ul>
+</div>

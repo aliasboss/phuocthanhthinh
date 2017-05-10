@@ -1,0 +1,327 @@
+<style>
+
+    .giavang-maiquyen table{
+       float: left;
+       margin-right: 20px;
+    }
+    
+    .giangoaite-maiquyen table{
+       float: left;
+       margin-right: 20px;
+    }
+        .giavang-maiquyen table tr{	                
+                border-bottom: 1px solid #CCCCCC;
+                border-top: 1px solid #CCCCCC;
+	}
+        .giavang-maiquyen table td{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                font-weight: bold;
+	}
+        .giavang-maiquyen table th{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                color: #dddddd;
+                background-color: #B80000;
+	}
+        
+        .giangoaite-maiquyen table tr{	                
+                border-bottom: 1px solid #CCCCCC;
+                border-top: 1px solid #CCCCCC;
+	}
+        .giangoaite-maiquyen table td{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                font-weight: bold;
+	}
+        .giangoaite-maiquyen table th{	                
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                color: #dddddd;
+                background-color: #B80000;
+	}
+        .giamq75 table th{
+            background-color: #536DFE;
+            color: #FFFFFF;
+        }
+        
+        .giamq75 table td{
+            font-weight: bold;
+        }
+</style>
+
+<div class="jumbotron">
+  <h2><?= NHK_Properties::get('cty') ?></h2>
+  <div class="box giamq75" style="text-align: center;">
+      <table width="400" border="1" style="border-collapse: collapse; border:1px solid #CCC;margin: auto;">
+          <thead>
+              <tr>
+                  <th colspan="3"><?= NHK_Properties::get('title_gia_vang') ?></th>
+              </tr>
+              <tr>
+                  <th width="40%">Loại vàng</th>
+                  <th width="30%">Mua</th>
+                  <th>Bán</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr >
+                  <td style="background-color: #B80000; color:#FFF">16K</td>
+                  <td id="mq75_16k_mua">0</td>
+                  <td id="mq75_16k_ban">0</td>
+              </tr>
+              <tr >
+                  <td style="background-color: #B80000; color:#FFF">17K</td>
+                  <td id="mq75_17k_mua">0</td>
+                  <td id="mq75_17k_ban">0</td>
+              </tr>
+              <tr >
+                  <td style="background-color: #B80000; color:#FFF">610</td>
+                  <td id="mq75_610_mua">0</td>
+                  <td id="mq75_610_ban">0</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  
+  <div class="box giavang-maiquyen">
+      <?php //echo $this->render('index/giavangmaiquyen.phtml'); ?>
+  </div>
+   <div class="box giangoaite-maiquyen">
+      <?php //echo $this->render('index/giavangmaiquyen.phtml'); ?>
+  </div>
+</div>
+<div class="row-fluid">
+  <div>
+        <!--<iframe width="100%" height="20" scrolling="no"  frameborder="0" src="http://freeserv.dukascopy.com/dhtml_rb/?W=980&STOCKS=512,2,1,9,506,505,504,334,333&C1=ffffff&C2=ffffff&C3=FFFFFF&C8=C0C0C0&C9=http://labando.com&C10=_self&C11=0&C12=2&BG_all=ffffff&C21=990000&C22=330066&C23=C0C0C0&TB=1&B=1" name="DCQT"></iframe>-->
+  </div>
+</div>
+<div class="box giavangnet">
+      <?php echo $this->render('index/giavangnet.phtml'); ?>
+  </div>
+<div class="row-fluid">
+  <?php echo $this->render('index/bieudongoaite.phtml') ?>
+  </div>
+
+<div class="box giavangsjc">
+    
+  </div>
+
+<div class="giavang-cantho-angiang">
+    <?php echo $this->render('index/giavang_cantho_angiang.phtml'); ?>
+</div>
+
+
+<div class="box bieudokitco">
+        <?php echo $this->render('index/bieudokitco.phtml'); ?>
+</div>
+<!--<div class="body">
+  
+  <div class="giavang-maiquyen">
+    
+  </div>
+  
+  
+  <div class="giavang-cantho-angiang">
+    <?php //echo $this->render('index/giavang_cantho_angiang.phtml'); ?>
+  </div>
+  
+  <div class="box giavangnet">
+      <?php //echo $this->render('index/giavangnet.phtml'); ?>
+  </div>
+  -->
+<!--<div class="box giavangsjc">
+    
+  </div>-->
+  
+<!--</div>-->
+<script src="<?php echo NHK_URL::getLinkPublic("js") ?>/bootstrap/bootstrap-tab.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  var url = '<?= NHK_URL::getLinkControllerDefault('index') ?>';
+ 
+  
+  
+  $(document).ready(function(){
+    
+    init();
+    auto_get_value();
+    $('#myTab_SJC_CanTho a:first').tab('show');
+    //$('#myTab_GiaVangNet a:first').tab('show');
+    
+    //$('iframe#framesjc').load(function() {
+      //$("iframe#framesjc").contents().find("#tbl_Image").hide();
+    //});
+    
+    
+  });
+  
+  init = function(){
+    getGiaMq75();
+    getNgoaiTe();
+   // getGiaCanTho();
+    //getGiaAnGiang();
+    getGiaSJC();
+  };
+  
+  auto_get_value = function(){
+      //setInterval(init,900000);
+      setInterval(getGiaMq75,300000);
+      setInterval(getNgoaiTe,300000);
+      setInterval(getGiaSJC,1200000);
+      //setInterval(getGiaAnGiang,1300000);
+      //setInterval(getGiaCanTho,1300000);
+
+  };
+  
+  getGiaMq75 = function(){
+    $.get(url+'/getgiamq75', {}, function(res){
+        $('.giavang-maiquyen').html(res);    
+        $(".giavang-maiquyen table:eq(0) tr:eq(1) th:eq(2)").remove();
+        $(".giavang-maiquyen table:eq(0) tr:eq(2) td:eq(2)").remove();
+        $(".giavang-maiquyen table:eq(0) tr:eq(3) td:eq(2)").remove();
+        $(".giavang-maiquyen table:eq(0)").width(400);
+        
+        for (var i=1;i<=11;i++){
+            $(".giavang-maiquyen table:eq(1) tr:eq(6)").remove();
+        }                  
+         $(".giavang-maiquyen table:eq(1)").width(400);
+         
+         //$(".giavang-maiquyen table:eq(1) td:eq(7)").html(3);
+         //$(".giavang-maiquyen table:eq(0) td:eq(4)").html();
+                
+         
+        var str_bf_mua = $(".giavang-maiquyen table:eq(1) td:eq(4)").html();
+         str_bf_mua = str_bf_mua.trim();
+         str_bf_mua = str_bf_mua.substr(0,2) + str_bf_mua.substr(3,3);
+        
+        var str_bf_ban = $(".giavang-maiquyen table:eq(1) td:eq(5)").html();
+         str_bf_ban = str_bf_ban.trim();
+         str_bf_ban = str_bf_ban.substr(0,2) + str_bf_ban.substr(3,3);
+         
+         var mua_16k = 0;
+         var ban_16k = 0;
+         var mua_17k = 0;
+         var ban_17k = 0;
+         var mua_610 = 0;
+         var ban_610 = 0;
+         
+         
+         
+         mua_16k = parseInt(str_bf_mua) * 0.6700;
+         mua_16k = Math.floor(mua_16k);
+         
+         ban_16k = parseInt(str_bf_ban) * 0.7050;
+         ban_16k = Math.floor(ban_16k);
+         
+         mua_17k = parseInt(str_bf_mua) * 0.7100;
+         mua_17k = Math.floor(mua_17k);
+         
+         ban_17k = parseInt(str_bf_ban) * 0.7350;
+         ban_17k = Math.floor(ban_17k);
+         
+         mua_610 = parseInt(str_bf_mua) * 0.6000;
+         mua_610 = Math.floor(mua_610);
+         
+         ban_610 = parseInt(str_bf_ban) * 0.6100;
+         ban_610 = Math.floor(ban_610);
+         
+         $("#mq75_610_mua").html(mua_610.format());
+         $("#mq75_610_ban").html(ban_610.format());
+         
+         $("#mq75_17k_mua").html(mua_17k.format());
+         $("#mq75_17k_ban").html(ban_17k.format());
+         
+         $("#mq75_16k_mua").html(mua_16k.format());
+         $("#mq75_16k_ban").html(ban_16k.format());
+         
+    });
+  };
+  getNgoaiTe = function(){
+    $.get(url+'/getgiangoaite', {}, function(res){
+        $('.giangoaite-maiquyen').html(res);
+        $(".giangoaite-maiquyen table:eq(0) tr:eq(1) th:eq(2)").remove();
+        $(".giangoaite-maiquyen table:eq(0) tr:eq(2) td:eq(2)").remove();
+        $(".giangoaite-maiquyen table:eq(0) tr:eq(3) td:eq(2)").remove();
+        $(".giangoaite-maiquyen table:eq(0) tr:eq(4) td:eq(2)").remove();
+        $(".giangoaite-maiquyen table:eq(0) tr:eq(5) td:eq(2)").remove();
+        $(".giangoaite-maiquyen table:eq(0)").width(400);
+        
+        $(".giangoaite-maiquyen table:eq(2) tr:eq(1) th:eq(4)").remove();
+        $(".giangoaite-maiquyen table:eq(2) tr:eq(1) th:eq(4)").remove();
+        //$(".giangoaite-maiquyen table:eq(2) tr:eq(16)").remove();
+        for (var i=1;i<=5;i++){
+            $(".giangoaite-maiquyen table:eq(2) tr:eq(22)").remove();
+        }               
+  
+        $(".giangoaite-maiquyen table:eq(2) tr").each(function(a) {                   
+                    $(".giangoaite-maiquyen table:eq(2) tr:eq("+a+") td:eq(3)").remove();
+                    $(".giangoaite-maiquyen table:eq(2) tr:eq("+a+") td:eq(3)").remove();
+        });
+      
+      $(".giangoaite-maiquyen table:eq(2)").width(500);
+    });
+  };
+  
+  getGiaSJC = function(){
+    $.get(url+'/getgiasjc', {}, function(res){
+        $('.giavangsjc').html(res);
+    });
+  };
+  
+  getGiaCanTho = function(){
+    $.get(url+'/getgiacantho', {}, function(res){
+      $("#content_cantho").html(res);
+    });
+  };
+  getGiaAnGiang = function(){
+    $.get(url+'/getgiaangiang', {}, function(res){
+      $("#content_angiang").html(res);
+    });
+  };
+  
+  Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+};
+
+test_get_gia = function(){
+   var str_bf_mua = $(".giavang-maiquyen table:eq(1) td:eq(4)").html();
+         str_bf_mua = str_bf_mua.trim();
+         str_bf_mua = str_bf_mua.substr(0,2) + str_bf_mua.substr(3,3);
+        
+        var str_bf_ban = $(".giavang-maiquyen table:eq(1) td:eq(5)").html();
+         str_bf_ban = str_bf_ban.trim();
+         str_bf_ban = str_bf_ban.substr(0,2) + str_bf_ban.substr(3,3);
+         
+         var mua_16k = 0;
+         var ban_16k = 0;
+         var mua_17k = 0;
+         var ban_17k = 0;
+         
+         
+         
+         mua_16k = parseInt(str_bf_mua) * 0.6700;
+         mua_16k = Math.floor(mua_16k);
+         
+         ban_16k = parseInt(str_bf_ban) * 0.7050;
+         ban_16k = Math.floor(ban_16k);
+         
+         mua_17k = parseInt(str_bf_mua) * 0.7100;
+         mua_17k = Math.floor(mua_17k);
+         
+         ban_17k = parseInt(str_bf_ban) * 0.7350;
+         ban_17k = Math.floor(ban_17k);
+         
+         
+         
+         $("#mq75_17k_mua").html(mua_17k.format());
+         $("#mq75_17k_ban").html(ban_17k.format());
+         
+         $("#mq75_16k_mua").html(mua_16k.format());
+         $("#mq75_16k_ban").html(ban_16k.format());  
+};
+</script>
+
+    

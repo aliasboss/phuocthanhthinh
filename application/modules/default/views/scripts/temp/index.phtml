@@ -1,0 +1,386 @@
+<style>
+
+    .giavang-maiquyen table{
+        float: left;
+        margin-right: 20px;
+    }
+
+    .giangoaite-maiquyen table{
+        float: left;
+        margin-right: 20px;
+    }
+    .giavang-maiquyen table tr{	                
+        border-bottom: 1px solid #CCCCCC;
+        border-top: 1px solid #CCCCCC;
+    }
+    .giavang-maiquyen table td{	                
+        border-left: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        font-weight: bold;
+    }
+    .giavang-maiquyen table th{	                
+        border-left: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        color: #dddddd;
+        background-color: #B80000;
+    }
+
+    .giaphuthinh table tr{	                
+        border-bottom: 1px solid #CCCCCC;
+        border-top: 1px solid #CCCCCC;
+    }
+    .giaphuthinh table td{	                
+        border-left: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        font-weight: bold;
+    }
+    .giaphuthinh table th{	                
+        border-left: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        color: #dddddd;
+        background-color: #B80000;
+    }
+    .giamq75 table th{
+        background-color: #536DFE;
+        color: #FFFFFF;
+    }
+
+    .giamq75 table td{
+        font-weight: bold;
+    }
+    .td_ngoaite_menhgia{
+        text-align: right;
+        padding-right: 20px;
+    }
+</style>
+
+<div class="jumbotron">
+    <h2>WEBSITE THAM KHẢO GIÁ VÀNG - NGOẠI TỆ</h2>
+    <h4 id="waiting">Hệ thống đang cập nhật giá vui lòng đợi giây lát ... ... ...</h4>
+    <div class="box giamq75" style="text-align: center; display: none;">
+        <table width="400" border="1" style="border-collapse: collapse; border:1px solid #FFF;margin: auto;">
+            <thead>
+                <tr>
+                    <th colspan="2">GIÁ VÀNG - NGOẠI TỆ</th>
+                </tr>
+                <tr>
+                    <th width="50%">Mua</th>
+                    <th>Bán</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="display: none;" class="box giavang-maiquyen">
+        loading ...
+        <?php //echo $this->render('index/giavangmaiquyen.phtml');  style="display: none;" ?>
+    </div>
+    <div style="display: none;" class="box giangoaite-maiquyen">
+        <?php //echo $this->render('index/giavangmaiquyen.phtml'); ?>
+    </div>
+    
+        <div class="box giaphuthinh">
+
+        <table style="width: 100%">
+            <tr>
+                <th >Loại Vàng</th>
+                <th >Giá Mua Vào</th>
+                <th >Giá Bán Ra</th>
+            </tr>            
+            <tr >
+                <td >95%</td>
+                <td id="M_95">0</td>
+                <td id="B_95">0</td>
+            </tr>
+            <tr >
+                <td >B_PHAN</td>
+                <td id="M_FAN">0</td>
+                <td id="B_FAN">0</td>
+            </tr>
+            <tr >
+                <td >B_K</td>
+                <td id="M_BK">0</td>
+                <td id="B_BK">0</td>
+            </tr>
+            <tr >
+                <td >SJC</td>
+                <td id="M_SJC">0</td>
+                <td id="B_SJC">0</td>
+            </tr>
+<!--            <tr >
+                <td >NT(96)US</td>
+                <td id="M_US">0</td>
+                <td id="B_US">0</td>
+            </tr>-->
+<!--            <tr style="text-decoration: underline; color: #0000ff; font-weight: bold;">
+                <td>GIÁ VÀNG MQ75</td>
+                <td id="M_MQ75">0</td>
+                <td id="B_MQ75">0</td>
+            </tr>-->
+        </table>
+            <br />
+<!--            <table style="width: 100%">
+                <tr style="text-decoration: underline; color: #0000ff; padding: 5px; font-weight: bold; font-size: 20px; background-color: #e6b800">
+                    <td style="padding: 10px;" colspan="3">GIÁ VÀNG MQ75</td>
+                </tr>
+            <tr>
+                <th >Loại Vàng</th>
+                <th >Giá Mua Vào</th>
+                <th >Giá Bán Ra</th>
+            </tr>            
+            <tr >
+                <td >16K</td>
+                <td id="M_16K">0</td>
+                <td id="B_16K">0</td>
+            </tr>
+            <tr >
+                <td >17K</td>
+                <td id="M_17K">0</td>
+                <td id="B_17K">0</td>
+            </tr>
+            <tr >
+                <td >610</td>
+                <td id="M_610">0</td>
+                <td id="B_610">0</td>
+            </tr>
+            </table>-->
+        <br />
+        <table class="dxgvControl" style="width: 100%; margin-top: 30px;">
+            <tr>
+                <th >Mã Ngoại tệ</th>
+                <th >Tên Ngoại tệ</th>
+                <th >Giá Mua Vào</th>
+                <th >Mệnh Giá</th>
+                
+            </tr>
+            <tr >
+                <td >GBP</td>
+                <td >Anh</td>
+                <td id="GBP" >0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >JPY</td>
+                <td >Nhật</td>
+                <td id="JPY">0</td>
+                <td class="td_ngoaite_menhgia">10.000</td>
+            </tr>
+            <tr >
+                <td >CHF</td>
+                <td >Thụy Sỹ</td>
+                <td id="CHF">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >CAD</td>
+                <td >Canada</td>
+                <td id="CAD">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >AUD</td>
+                <td >Úc</td>
+                <td id="AUD">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >EUR</td>
+                <td >EURO</td>
+                <td id="EUR">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >TWD</td>
+                <td >Đài Loan</td>
+                <td id="TWD">0</td>
+                <td class="td_ngoaite_menhgia">1.000</td>
+            </tr>
+            <tr >
+                <td >SGD</td>
+                <td >SINGAPORE</td>
+                <td id="SGD">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr style="text-decoration: underline; color: #0000ff; font-weight: bold;">
+                <td >US</td>
+                <td >96</td>
+                <td id="M_US">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >MYR</td>
+                <td >MALAYSIA</td>
+                <td id="MYR">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >KRW</td>
+                <td >Hàn Quốc</td>
+                <td id="KRW">0</td>
+                <td class="td_ngoaite_menhgia">10.000</td>
+            </tr>
+            <tr >
+                <td >HKD</td>
+                <td >Hồng Kông</td>
+                <td id="HKD">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >NZD</td>
+                <td >NEW ZEALAND</td>
+                <td id="NZD">0</td>
+                <td class="td_ngoaite_menhgia">0</td>
+            </tr>
+            <tr >
+                <td >CNY</td>
+                <td >Trung Quốc</td>
+                <td id="CNY">0</td>
+                <td class="td_ngoaite_menhgia">100</td>
+            </tr>
+            <tr >
+                <td >THB</td>
+                <td >Thái Lan</td>
+                <td id="THB">0</td>
+                <td class="td_ngoaite_menhgia">1.000</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row-fluid">
+    <div>
+          <!--<iframe width="100%" height="20" scrolling="no"  frameborder="0" src="http://freeserv.dukascopy.com/dhtml_rb/?W=980&STOCKS=512,2,1,9,506,505,504,334,333&C1=ffffff&C2=ffffff&C3=FFFFFF&C8=C0C0C0&C9=http://labando.com&C10=_self&C11=0&C12=2&BG_all=ffffff&C21=990000&C22=330066&C23=C0C0C0&TB=1&B=1" name="DCQT"></iframe>-->
+    </div>
+</div>
+<div class="box giavangnet">
+    <?php echo $this->render('index/giavangnet.phtml'); ?>
+</div>
+<div class="row-fluid">
+    <?php //echo $this->render('index/bieudongoaite.phtml'); ?>
+</div>
+
+
+
+<div class="box bieudokitco">
+    <?php echo $this->render('index/bieudokitco.phtml'); ?>
+</div>
+
+<script src="<?php echo NHK_URL::getLinkPublic("js") ?>/bootstrap/bootstrap-tab.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    var url = '<?= NHK_URL::getLinkControllerDefault('index') ?>';
+
+
+
+    $(document).ready(function () {
+
+        init();
+        auto_get_value();
+        //$('#myTab_SJC_CanTho a:first').tab('show');
+        //$('#myTab_GiaVangNet a:first').tab('show');
+
+        //$('iframe#framesjc').load(function() {
+        //$("iframe#framesjc").contents().find("#tbl_Image").hide();
+        //});
+
+
+    });
+
+    init = function () {
+        displayGold();
+        displayCurrence();
+       
+        
+    };
+
+    auto_get_value = function () {
+        
+        setInterval(displayGold, 300000);
+        setInterval(displayCurrence, 600000);
+      
+
+    };
+
+    displayGold = function () {
+        $.post(url + '/getcachegiavang', {}, function (res) {
+            $('.giavang-maiquyen').html(res);
+            var giavangmua = [];
+            var giavangban = [];
+//            var giangoaite = [];
+            var magiavang=["95","FAN","BK","SJC","US"];
+//            var mangoaite = ["GBP","JPY","CHF","CAD","AUD","EUR","TWD","SGD","USD","MYR","KRW","HKD","NZD","CNY","THB"];
+            giavangmua[$(".giavang-maiquyen table:eq(0) td:eq(9)").html()] = parseInt($(".giavang-maiquyen table:eq(0) td:eq(10)").html());
+            giavangban[$(".giavang-maiquyen table:eq(0) td:eq(9)").html()] = parseInt($(".giavang-maiquyen table:eq(0) td:eq(11)").html());
+            giavangmua[$(".giavang-maiquyen table:eq(0) td:eq(12)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(13)").html();
+            giavangban[$(".giavang-maiquyen table:eq(0) td:eq(12)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(14)").html();
+            giavangmua[$(".giavang-maiquyen table:eq(0) td:eq(15)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(16)").html();
+            giavangban[$(".giavang-maiquyen table:eq(0) td:eq(15)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(17)").html();
+            giavangmua[$(".giavang-maiquyen table:eq(0) td:eq(18)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(19)").html();
+            giavangban[$(".giavang-maiquyen table:eq(0) td:eq(18)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(20)").html();
+            giavangmua[$(".giavang-maiquyen table:eq(0) td:eq(21)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(22)").html();
+            giavangban[$(".giavang-maiquyen table:eq(0) td:eq(21)").html()] = $(".giavang-maiquyen table:eq(0) td:eq(23)").html();
+//            
+//            
+//            
+            var index;
+            var gia_ban = 0;
+            var gia_mua = 0;
+            for	(index = 0; index < magiavang.length; index++) {
+                //console.log(magiavang[index]);
+                gia_mua = giavangmua[magiavang[index]]*1;
+                gia_ban = giavangban[magiavang[index]]*1;
+                $("#M_"+magiavang[index]).html(gia_mua.format());
+                $("#B_"+magiavang[index]).html(gia_ban.format());
+            }
+
+            
+            var ban = 0;
+            var mua = 0;
+           
+            
+            
+            
+            var currentDate = new Date();
+            $("#waiting").html("Giá được cập nhật lúc: "+currentDate.toLocaleString());
+        });
+    };
+    
+    displayCurrence = function () {
+        $.post(url + '/getcachengoaite', {}, function (res) {
+            $('.giangoaite-maiquyen').html(res);
+  
+            var giangoaite = [];
+            var mangoaite = ["GBP","JPY","CHF","CAD","AUD","EUR","TWD","SGD","MYR","KRW","HKD","NZD","CNY","THB","RUB","IDR","PHP","LAK","KHR","USD"];
+           
+            var flagMa = 15;
+            var flagGia = 17;
+            for	(index = 0; index < mangoaite.length; index++) {
+                giangoaite[$(".giangoaite-maiquyen table:eq(0) td:eq("+flagMa.toString()+")").html()] = $(".giangoaite-maiquyen table:eq(0) td:eq("+flagGia.toString()+")").html();
+                flagMa = flagMa+5;
+                flagGia = flagGia+5;
+            }
+            var gia = 0;
+            for	(index = 0; index < mangoaite.length; index++) {
+                gia = giangoaite[mangoaite[index]] *1;
+                $("#"+mangoaite[index]).html(gia.format());
+            }
+
+            //var currentDate = new Date();
+            //$("#waiting").html("Giá được cập nhật lúc: "+currentDate.toLocaleString());
+        });
+    };
+
+
+    Number.prototype.format = function (n, x) {
+        var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+        return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+    };
+</script>
+
+

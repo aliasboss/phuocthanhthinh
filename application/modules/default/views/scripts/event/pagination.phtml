@@ -1,0 +1,16 @@
+<?php $url = NHK_URL::getLinkControllerDefault('event').'/index/page/'; ?>
+<div class="pagination">
+    <ul>
+      <li class="<?php if (!isset($this->previous)) echo 'disabled';?>"><a href="<?php if(isset($this->previous)) echo "{$url}{$this->previous}"; else echo 'javascript:';?>">Prev</a></li>
+      <?php
+          foreach ($this->pagesInRange as $page){
+             if ($page != $this->current){                   
+                  echo '<li><a href="'.$url.$page.'">'.$page.'</a></li>';
+            }else{
+                  echo '<li class="active"><a href="javascript:">'.$page.'</a></li>';
+            }
+         }
+      ?>        
+      <li class="<?php if (!isset($this->next)) echo 'disabled';?>"><a href="<?php if(isset($this->next)) echo "{$url}{$this->next}"; else echo 'javascript:';?>">Next</a></li>
+    </ul>
+</div>

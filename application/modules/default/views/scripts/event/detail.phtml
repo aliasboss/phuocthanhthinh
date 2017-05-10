@@ -1,0 +1,36 @@
+<div class="box">
+  <?php if($this->data): ?>
+  <?php $data = $this->data; ?>
+  <div class="box-header"><?= $data->title ?></div>
+  <div class="box-content">
+    <h2>
+        <?= $data->title ?>
+    </h2>
+    <div style="font-style: italic;">
+         <?php if($data->time_post != ''): 
+                      echo $data->time_post;
+                    else:
+                      echo date("d-m-Y H:i:s",strtotime($data->created_at)); 
+                    endif;
+                      ?>
+    </div>
+    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">
+        <?php if($data->page == 'vietstock.vn'): ?>
+          <?= $data->short_des ?>
+      
+          <?php endif; ?>
+    </div>
+    <div style="text-align: left;">
+        <?php if($data->page != 'vietstock.vn'): ?>
+        <img src="<?= $data->thumb_img ?>" title="<?= $data->title ?>" alt="<?= $data->title ?>" width="100px" />
+        <?php endif; ?>
+        <?= $data->short_des?>
+    </div>
+      <br />
+      <hr />
+    <div style="margin-left: 10px;">
+        <?= $data->description ?>
+      </div>
+  </div>
+  <?php endif; ?>
+</div>

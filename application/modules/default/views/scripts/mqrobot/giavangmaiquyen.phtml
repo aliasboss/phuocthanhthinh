@@ -1,0 +1,12 @@
+<?php
+    $mq75 = $this->data_mq75;
+ // $banra = round((round(($mq75["f"]["b"]/9980)*1000,0) + 5)*0.7050,0)*10;
+    $banra = round($mq75["d"]["b"] *0.7050,0);
+  $muavao = round(round(($mq75["9t5"]["m"]/950)*100,0) * 67 /100,0)*10;
+?>
+<div class="box-header">GIÁ VÀNG TẠI TIỆM VÀNG <?= NHK_Properties::get('cty') ?></div>
+<div class="box-content">
+  <div style="margin: 10px 0px 10px 0px; font-size: 16px; font-weight: bold;">Thời gian cập nhật: <?= date('d-m-Y H:i:s') ?></div>
+ 
+</div>
+

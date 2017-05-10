@@ -1,0 +1,10 @@
+<?php if($this->errors):?>
+	<div id="LMErr"><div class="alert alert-error" id="LMErrW1">
+		<p class="CP1">There is an error in the your input fields . Please check.</p>
+		<?php foreach ($this->errors as $error):?>	
+			<?php if($error !=''):?> <p class="CP2"><?php echo $error;?></p> <?php endif;?>	
+		<?php endforeach; ?>	
+	<!-- /LMErr/LMErrW1 --></div>
+	</div>
+	<?php echo $this->render('common/_js_add_error_field.phtml');?>
+<?php endif;?>
