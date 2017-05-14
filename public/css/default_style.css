@@ -2,14 +2,64 @@
 body {
     min-height: 2000px;
     padding-top: 70px;
+    background-color: #620001;
 }
 
 /* Custom container */
-.container {
 
+.navbar-default{
+    background: -moz-linear-gradient(top, rgba(98,0,1,1) 0%, rgba(122,24,2,1) 50%, rgba(88,1,2,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(98,0,1,1) 0%,rgba(122,24,2,1) 50%,rgba(88,1,2,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(98,0,1,1) 0%,rgba(122,24,2,1) 50%,rgba(88,1,2,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#620001', endColorstr='#580102',GradientType=0 ); /* IE6-9 */
+border-color: #7A1802;
 }
-.container > hr {
 
+.navbar-default .navbar-brand{
+/*    color: #FFFF00;*/
+    color: #FFF;
+}
+.navbar-default .navbar-brand:hover{
+    color: #FFFF00;
+}
+.navbar-nav li{
+    background-color: #880002;
+    
+}
+.navbar-default .navbar-nav > li > a{
+    color: #FFF;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: #FFFF00;
+    background-color: #880002;
+}
+.navbar-default .navbar-nav > .active > a{
+    background-color: #FBF533;
+    color: #620001;
+}
+.navbar-default .navbar-nav > .active > a:hover{
+    background-color: #FBF533;
+}
+.jumbotron{
+    background-color: #500001;
+}
+.jumbotron h2{
+    color: #FFF;    
+}
+
+.box-left .box-left-header{
+    background:  url(../images/bg_title_tb_R.png) no-repeat;
+    color: #FFF;
+    padding-left: 20px;
+    position: absolute;
+}
+.box-left .box-left-content{
+    border: 1px solid #5a0203;
+    border-radius: 0 3px 3px;
+    padding: 2px;
+    background: #430101;
+    margin-top: 10px;
+    padding-top: 20px;
 }
 
 
@@ -17,21 +67,23 @@ body {
 
 
 .box{
-    border: 1px solid #aaa;
+    border : 1px solid #7A1802;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #FFF;
+    background-color: #620001;
 }
 .box-header{
     padding: 5px;
+    padding-left: 10px;
     text-transform: uppercase;
-    border-bottom: 1px solid #aaa;
-    background-color: #ffe207;
-    color: #C80101;
-    text-shadow: 1px 1px #FDF2BE;
+    border-bottom: 1px solid #7A1802;
+    background-color: #500001;
+    color: #fbf533;
+/*    text-shadow: 1px 1px #FDF2BE;*/
     font-weight: bold;
+    font-size: 12px;
 }
 .box-content{
     padding: 5px;
