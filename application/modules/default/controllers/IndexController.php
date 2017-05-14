@@ -4,7 +4,7 @@ class IndexController extends NHK_DefaultController {
 
     public function init() {
 
-        $this->setLayout('main', 'default');
+        $this->setLayout('main_new', 'default');
         $this->view->headTitle("Hội Kim Hoàn Cà Mau");
         $this->view->menu = 'home';
     }
