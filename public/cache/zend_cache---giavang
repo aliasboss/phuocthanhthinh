@@ -1,8 +1,8 @@
-s:6858:"<table width="100%">
+s:6854:"<table width="100%">
 <tr>
 <td class="style31">Cập Nhật</td>
 				<td colspan="3" class="style31">
-					24/04/2017				</td>
+					20/05/2017				</td>
 			</tr>
 <tr class="header">
 <td></td>
@@ -12,15 +12,15 @@ s:6858:"<table width="100%">
 			</tr>
 <tr class="row1">
 <th style="padding:0">SJC HCM</th>
-				<td style="padding:0 2px" class="price1">36,560</td>
-				<td style="padding:0 2px" class="price1">36,760</td>
-				<td style="padding:0" class="price1">03:57:28</td>
+				<td style="padding:0 2px" class="price1">36,430</td>
+				<td style="padding:0 2px" class="price1">36,630</td>
+				<td style="padding:0" class="price1">09:27:12</td>
 			</tr>
 <tr class="row2">
 <th style="padding:0">Eximbank</th>
-				<td style="padding:0 2px" class="price1">36,640</td>
-				<td style="padding:0 2px" class="price1">36,720</td>
-				<td style="padding:0" class="price1">16:34:04</td>
+				<td style="padding:0 2px" class="price1">36,510</td>
+				<td style="padding:0 2px" class="price1">36,580</td>
+				<td style="padding:0" class="price1">10:41:08</td>
 			</tr>
 </table><table width="100%" cellspacing="1" cellpadding="0"><tbody>
 <tr>
@@ -31,7 +31,7 @@ s:6858:"<table width="100%">
 <tr>
 <td class="style31" colspan="3">
 		Cập nhật: <span id="ngaycapnhat">
-			24/04/2017 21:31:29		</span>
+			20/05/2017 22:15:53		</span>
 	</td>
 </tr>
 <tr class="header row1" style="background-color: #e5c347">
@@ -42,24 +42,24 @@ s:6858:"<table width="100%">
 <tr class="row2">
 <th>95%</th>
 	<td class="price1">
-	0	</td>
+	32,630	</td>
 	<td class="price1">
-		0	</td>
+		32,700	</td>
 </tr>
 <tr class="row1">
 <th>Bóng Phân</th>
 	<td class="price1">
-	0	</td>
+	34,360	</td>
 	<td class="price1">
-		0	</td>
+		34,430	</td>
 </tr>
 <tr class="row2">
 <th>Bóng Đẹp <div class="moreBD">(Không Chữ)</div>
 </th>
 	<td class="price1">
-	0	</td>
+	34,410	</td>
 	<td class="price1">
-		0	</td>
+		34,480	</td>
 </tr>
 <tr class="row1" style="display:none;">
 <th>Bóng Đẹp(<span style="color:green">Chữ</span>)</th>
@@ -71,39 +71,39 @@ s:6858:"<table width="100%">
 <tr class="row1">
 <th>SJC</th>
 	<td class="price1">
-	36,663	</td>
+	36,530	</td>
 	<td class="price1">
-	36,733	</td>
+	36,590	</td>
 </tr>
 <tr class="row2">
 <th>Thế Giới</th>
-	<td class="price1" style="color:red">1,271.33</td>
-	<td class="price2" style="color:red">1,271.53</td>
+	<td class="price1" style="color:green">1,255.04</td>
+	<td class="price2" style="color:green">1,256.69</td>
 </tr>
 <tr class="row1">
 <th>Thay Đổi (%)</th>
-	<td class="price1" style="color:red">-0.96</td>
-	<td class="price2" style="color:red">-12.29</td>
+	<td class="price1" style="color:green">0.52</td>
+	<td class="price2" style="color:green">6.54</td>
 </tr>
 <tr class="row2">
 <th> Giá Dầu </th>
-	<td class="price1" style="color:red">
-		49.3	</td>
-	<td class="price1" style="color:red">
-		49.35	</td>
+	<td class="price1" style="color:green">
+		50.41	</td>
+	<td class="price1" style="color:green">
+		50.46	</td>
 </tr>
 <tr class="row2">
 <td colspan="3" class="text_gold">
 	
-	SJC cao hơn thế giới: 1,847,336<br><i style="color:red">Lưu ý: Giá Vàng đang ở chế độ tự động. </i>	</td>
+	SJC cao hơn thế giới: 2,111,826	</td>
 </tr>
 <tr class="row2">
 <td colspan="3" class="text_gold">
-		</td>
+	B.Đẹp cao hơn thế giới: 109,831	</td>
 </tr>
 <tr class="row1">
 <td class="note1" colspan="3">
-		<a class="direct" rel="nofollow" style="color:red" href="https://dwq4do82y8xi7.cloudfront.net/widgetembed/?symbol=XAUUSD&amp;showpopupbutton=1" target="_blank">
+		<a class="direct" rel="nofollow" style="color:green" href="https://dwq4do82y8xi7.cloudfront.net/widgetembed/?symbol=XAUUSD&amp;showpopupbutton=1" target="_blank">
 		Xem đồ thị Nến giá vàng
 		</a> <br><span style="color:blue;">Giá chỉ mang tính tham khảo.</span>
 	</td>

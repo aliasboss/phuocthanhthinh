@@ -14,7 +14,8 @@ class IndexController extends NHK_DefaultController {
 
         $modelConfig = new Config();
         $config = $modelConfig->get("link_get_gia");
-        
+        $modelNews = new News();
+        $this->view->news = $modelNews->getNew();
         
         
         if (User::is_login()) {
@@ -471,7 +472,7 @@ class IndexController extends NHK_DefaultController {
     function infoAction() {
 
         $this->require_authenticated();
-        $this->setLayout('main', 'default');
+        //$this->setLayout('main', 'default');
         $params = $this->_request->getParams();
         if ($params['id'] != '') {
             $model_user = new User();

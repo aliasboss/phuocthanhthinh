@@ -1,44 +1,40 @@
-<style>
-    
-</style>
 <link href="<?php echo NHK_URL::getLinkPublic("plugin") ?>/animated_modal/css.css?t=125" media="screen" rel="stylesheet" type="text/css" />
-<div style="display: none;"  class="box giavang-maiquyen">
-    <?php //echo $this->render('index/giavangmaiquyen.phtml'); ?>
-</div>
-<div style="display: none;"  class="box giangoaite-maiquyen">
-    <?php //echo $this->render('index/giavangmaiquyen.phtml'); ?>
-</div>
-
-<div class="box">
-    <?php echo $this->render('index/divGiaVangCaMau.phtml'); ?>
-</div>
-<div class="box">
-    <?php echo $this->render('index/divGiaTheGioi.phtml'); ?>
-</div>
-
-<div class="box">
-    <div class="box-header">
-        GÍA VÀNG & NGOẠI TỆ THAM KHẢO
+<!--
+<div class="box-main">
+    <div class="box-main-header">
+        <h1 class="box-main-header-title">
+            <span class="box-main-header-title-icon">GIÁ VÀNG & NGOẠI TỆ THAM KHẢO</span>
+            </h1>
     </div>
-    <div class="box-content row">
-        <div style="font-weight: bold; font-size: 18px; text-align: center; padding: 30px;">
-            Vui lòng <span style="color: #F00;">ĐĂNG NHẬP</span> để xem được giá.<br /><br />
-            Liên hệ <span style="color: #F00;"> 0918.355.155 - 0913.986.033 </span> để biết thêm chi tiết.
+    <div class="box-main-content">
+        <div style="font-weight: bold; font-size: 18px; text-align: center; padding: 30px; color: #FFF;">
+            Vui lòng <span style="color: #FDE196;">ĐĂNG NHẬP</span> để xem được giá.<br /><br />
+            Liên hệ <span style="color: #FDE196;"> 0918.355.155 </span> để biết thêm chi tiết.
         </div>
     </div>
+</div>-->
+<div class="box-main">
+    <?php echo $this->partial('index/divTinTucNoiBat.phtml',array('news'=>$this->news)); ?>
 </div>
-
-<div class="box giavangnet">
+<div class="box-main">
+    <?php echo $this->render('index/divGiaTheGioi.phtml'); ?>
+</div>
+<div class="box-main giavangnet">
     <?php echo $this->render('index/giavangnet.phtml'); ?>
 </div>
+<div class="box-main giavangnet">
+    <?php echo $this->render('index/fxstreet.phtml'); ?>
+</div>
 
-<div id="modal_login" class="modal hide fade">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3>Thông Báo</h3>
-    </div>
-    <div class="modal-body">
-        <?php if (isset($this->result) && $this->result) {
+<div class="modal fade" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Thông Báo</h4>
+      </div>
+      <div class="modal-body">
+         <?php if (isset($this->result) && $this->result) {
             ?>	
             <div class="error_alert alert alert-block alert-error fade in">			
                 <?= $this->result; ?>
@@ -66,25 +62,17 @@
                 </ul>
             </div>
         <?php endif; ?>
-        <?php //echo $this -> render('common/_error_handle.phtml'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
-
-
-
+  </div>
 </div>
 
-<!--<div id="modal_notification" class="modal hide fade">
-    <div class="modal-header">   
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3>Thông Báo</h3>
-    </div>
-    <div class="modal-body">
-
-    </div>
 
 
 
-</div>-->
 
 <div style="display: none;">
   <div id="modal-content-demo" class="modal-content">
@@ -107,20 +95,17 @@
 
         init();
         auto_get_value();
-
         show_modal_login();
-        fix_bang_gia_ca_mau();
+       
 
     });
 
-    init = function () {
-        getGiaVangCaMau();
+    init = function () {       
         getGiaTheGioi();
         displayNotification();
     };
 
-    auto_get_value = function () {
-        setInterval(getGiaVangCaMau, 300000);
+    auto_get_value = function () {        
         setInterval(getGiaTheGioi, 300000);
 
     };

@@ -1,8 +1,24 @@
-<div class="box">
+<div class="box-main">
   <?php if($this->data): ?>
   <?php $data = $this->data; ?>
-  <div class="box-header"><?= $data->title ?></div>
-  <div class="box-content">
+    <style>
+        .detail-news h2{
+            color: #FFFF00;
+        }
+        .detail-news{
+            color: #eee;
+        }
+    </style>
+    
+    <div class="box-main-header">
+       <h1 class="box-main-header-title">
+           <span class="box-main-header-title-icon">TIN TỨC > &nbsp;
+  <?= $data->title ?>
+            </span>
+            </h1>
+  
+  </div>
+    <div style="padding: 10px;" class="box-main-content detail-news">
     <h2>
         <?= $data->title ?>
     </h2>
@@ -28,7 +44,7 @@
     </div>
       <br />
       <hr />
-    <div style="margin-left: 10px;">
+    <div style="margin-left: 10px; padding: 10px;">
         <?= $data->description ?>
       </div>
   </div>

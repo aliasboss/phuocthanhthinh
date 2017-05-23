@@ -1,12 +1,24 @@
-<div class="box">
-  <div class="box-header">Danh sách tin tức</div>
-  <div class="box-content">
+<style>
+    .index-news{
+        
+    }
+    .index-news p{
+        color: #FFF;
+    }
+</style>
+<div class="box-main">
+  <div class="box-main-header">
+       <h1 class="box-main-header-title">
+            <span class="box-main-header-title-icon">DANH SÁCH TIN TỨC</span>
+            </h1>
+  </div>
+  <div style="padding: 10px;" class="box-main-content index-news">
     <?php foreach ($this->data as $item): ?>
       <?php $new_url = NHK_URL::getLinkControllerDefault('news').'/detail/id/'.$item['id']; ?>
       <div class="media">
         <a class="pull-left" title="<?= $item['title'] ?>" href="<?= $new_url ?>">
           <img width="100" height="100" src="<?= $item['thumb_img'] ?>" class="media-object" data-src="holder.js/100x100">
-          <p style="font-style: italic; color: #888; font-size: 12px;">
+          <p style="font-style: italic; color: #ddd; font-size: 12px;">
               <?php if($item['time_post'] != ''): 
                       echo $item['time_post'];
                     else:
@@ -36,7 +48,7 @@
 </div>
 
 <div>
-  <?php echo $this->paginationControl($this->paginator, 'Sliding', 'news/pagination.phtml'); ?>
+  <?php //echo $this->paginationControl($this->paginator, 'Sliding', 'news/pagination.phtml'); ?>
 </div>
 
 

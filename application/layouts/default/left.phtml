@@ -1,35 +1,110 @@
+<!--<style>
+    .tin-tuc dt{
+        margin-bottom: 5px;
+    }
+    .tin-tuc a{
+        color: #FDE196;
+        text-decoration: underline;
+    }
+</style>
+<div class="box">
+    <div class="box-header">
+        Tin tức nổi bật
+    </div>
+    <div style="text-align: left; color: #FAB905" class="box-content">
+        <dl class="tin-tuc">            
+                <dt>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <a href="#">Đêm qua vàng ở trên mốc 1250$</a>
+                </dt>
+                <dt>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <a href="#">Vàng đang thẳng tiến đến tuần tăng giá</a>
+                </dt>
+                <dt>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <a href="#">Vàng trượt giảm do động thái chốt lời</a>
+                </dt>
+                <dt>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <a href="#">Đêm qua vàng ở trên mốc 1250$</a>
+                </dt>
+                <dt>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <a href="#">Nhà đầu tư đang đổ xô vào vàng</a>
+            </dt>
+        </dl>
+
+    </div>
+</div>-->
+
+
 <div class="box">
     <div class="box-header">
         Thông tin đăng nhập
     </div>
-    <div class="box-content">
+    <div style="color: #FFF;" class="box-content">
         <?php if (User::is_login()) { ?>
 
-            <p style="margin-left: 10px;" class="navbar-text pull-right">
-                <a href="<?php echo NHK_URL::getLinkControllerDefault('index') . '/logout/' ?>" class="navbar-link">Đăng xuất</a>
-            </p>
-            <p style="margin-left: 10px;" class="navbar-text pull-right">
-                |
-            </p>
-            <p class="navbar-text pull-right">    
-                <?php $date_exp = new DateTime(NHK_Auth::getUser()->time_expired); ?>
-                <a target="_blank" href="<?= NHK_URL::getLinkControllerDefault('index') ?>/info/id/<?php echo NHK_Auth::getUser()->id; ?>" class="navbar-link"><?php echo NHK_Auth::getUser()->fullname; ?></a> . Hết hạn: <?= $date_exp->format("d-m-Y") ?> 
-            </p>    
-        <?php } else { ?>
-            <form action="<?php echo NHK_URL::getLink("root") ?>/index/login" method="post"  class="navbar-form pull-right">
-
-               
-                <label for="inputEmail" class="sr-only">Email address</label>
-                <input type="email" id="inputEmail" class="form-control" name="username" placeholder="Tài Khoản" required autofocus>
+        <div style="text-align: left; margin-left: 20px;">
+            <span class="glyphicon glyphicon-user"></span>  <a target="_blank" href="<?= NHK_URL::getLinkControllerDefault('index') ?>/info/id/<?php echo NHK_Auth::getUser()->id; ?>" class="navbar-link"><?php echo NHK_Auth::getUser()->username; ?></a>
+        </div>
+        <div style="text-align: left; margin-left: 20px;">
+           
+            <span class="glyphicon glyphicon-calendar"> 
+             
+            
+            </span>
+            <?php 
+                $date_exp = new DateTime(NHK_Auth::getUser()->time_expired); 
+                echo "Hết hạn: {$date_exp->format("d-m-Y")}";
                 
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input style="margin-top: 5px;" type="password" id="inputPassword" class="form-control" name="password" placeholder="Mật Khẩu" required>
-              
-                <button style="margin-top: 5px;" class="btn btn-lg btn-danger" type="submit">Đăng Nhập</button>
+                ?>
+        </div>
+        <div>
+            <a href="<?php echo NHK_URL::getLinkControllerDefault('index') . '/logout/' ?>" class="btn btn-primary btn-xs">Đăng xuất</a>
+        </div>
 
-              
-        
+            
+        <?php } else { ?>
+            <form action="<?php echo NHK_URL::getLink("root") ?>/index/login" method="post"  class="form-horizontal">
+
+
+<!--                <label for="inputEmail" class="sr-only">Email address</label>-->
+                <input type="input" id="inputEmail" class="form-control" name="username" placeholder="Tài Khoản" required autofocus>
+
+<!--                <label for="inputPassword" class="sr-only">Password</label>-->
+                <input style="margin-top: 5px;" type="password" id="inputPassword" class="form-control" name="password" placeholder="Mật Khẩu" required>
+
+                <button style="margin-top: 5px;" class="btn btn-danger" type="submit">Đăng Nhập</button>
+
+
+
             </form>
         <?php } ?>
     </div>
 </div>
+
+
+<div class="box">
+    <div class="box-header">
+        Biểu đồ kitco
+    </div>
+    <div class="box-content">
+        <iframe width="180" scrolling="yes" height="130" frameborder="0" style="border:0px; overflow:hidden" src="http://www.kitco.com/images/live/t24_au_en_usoz_6.gif"></iframe>
+        <iframe width="180" scrolling="yes" height="130" frameborder="0" style="border:0px; overflow:hidden" src="http://www.weblinks247.com/indexes/idx24_usd_en_2.gif"></iframe>
+
+
+    </div>
+</div>
+
+<!--
+<div class="box">
+    <div class="box-header">
+        Quảng Cáo
+    </div>
+    <div class="box-content">
+        <img src="<?php echo NHK_URL::getLinkPublic("img") ?>/ads/mq75.gif" />
+
+    </div>
+</div>-->

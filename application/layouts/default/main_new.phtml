@@ -34,17 +34,55 @@
          <?php echo $this->render('/header.phtml'); ?>
       </div>
       <div class="row">
-          <div class="col-xs-6 col-md-4">
+          <div class="col-xs-12 col-md-3">
               <?php echo $this->render('/left.phtml'); ?>
           </div>
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-9">
               <?php echo $this->layout()->content; ?> 
           </div>
       </div>
-
+ <footer>
+                <?php echo $this->render('/footer.phtml'); ?>
+            </footer>
     </div> <!-- /container -->
 
+<script type="text/javascript">
+            var url_main = '<?= NHK_URL::getLinkControllerDefault('index') ?>';
 
+
+
+
+            $(document).ready(function () {
+
+                init_main();
+                auto_call_func();
+
+
+            });
+
+            init_main = function () {
+                checkOnline();
+            };
+            auto_call_func = function () {
+                setInterval(checkOnline, 880000);
+            };
+
+            checkOnline = function () {
+                $.get(url_main + '/check-online', {}, function (res) {
+                    var data = JSON.parse(res);
+                    $(".block-stat .statistics strong").html(data['statistics']);
+                    $(".block-stat .today strong").html(data['today']);
+                    $(".block-stat .month strong").html(data['month']);
+                    $(".block-stat .online strong").html(data['online']);
+                    $(".block-stat .guest strong").html(data['online'] - data['useronline']);
+                    $(".block-stat .user strong").html(data['useronline']);
+
+                });
+            };
+            
+             
+
+        </script>
   
     
   </body>

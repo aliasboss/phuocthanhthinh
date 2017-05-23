@@ -47,7 +47,7 @@
   <div class="control-group">
     <label class="control-label" for="description"><?php echo NHK_Properties::get("title_column_description", $this->section, $this->properties); ?></label>
     <div class="controls">
-      <textarea id="description" style="height: 400px" name="data[description]">
+      <textarea id="description" style="height: 800px" name="data[description]">
   <?php
   if ($this->params != null && isset($this->params['description']) && $this->params['description'] != '') {
     echo $this->params['description'];
@@ -69,6 +69,8 @@
 <script src="<?php echo NHK_URL::getLinkPublic("root") ?>/ckeditor/ckeditor.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    CKEDITOR.replace('description');
+    CKEDITOR.replace('description',{
+height: '700px',
+});
   });
 </script>
