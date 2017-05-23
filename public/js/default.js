@@ -56,32 +56,34 @@ getGiaTheGioi = function () {
         var obj = jQuery.parseJSON(res);
         var ask = parseFloat(obj.Ask);
         var bid = parseFloat(obj.Bid);
-        var spread_val = parseFloat(obj.Spread);
-        $("#ask").html(ask.toFixed(2));
-        $("#bid").html(bid.toFixed(2));
-        $("#spread_val").html(spread_val.toFixed(1));
+        var spread_val = parseFloat(obj.Spread)/100;
+        $("#gia-ban").html(ask.toFixed(2));
+        $("#gia-mua").html(bid.toFixed(2));
+        $("#spread_val").html(spread_val.toFixed(2));
+
+       $("#icon-gia-ban").removeClass("glyphicon-arrow-up");
+       $("#icon-gia-ban").removeClass("glyphicon-arrow-down");
+       $("#icon-gia-ban").removeClass("glyphicon-resize-horizontal");
+       
+       $("#icon-gia-mua").removeClass("glyphicon-arrow-up");
+       $("#icon-gia-mua").removeClass("glyphicon-arrow-down");
+       $("#icon-gia-mua").removeClass("glyphicon-resize-horizontal");
 
         if (obj.SwapLong > 0) {
-            $("#css_buy").removeClass('down');
-            $("#css_buy").removeClass('no-change');
-            $("#css_buy").addClass('up');
+           
+            $("#icon-gia-ban").addClass('glyphicon-arrow-up');
         } else if (obj.SwapLong < 0) {
-            $("#css_buy").removeClass('up');
-            $("#css_buy").removeClass('no-change');
-            $("#css_buy").addClass('down');
+           
+            $("#icon-gia-ban").addClass('glyphicon-arrow-down');
         } else {
-            $("#css_buy").addClass('no-change');
+            $("#icon-gia-ban").addClass('glyphicon-resize-horizontal');
         }
         if (obj.SwapShort > 0) {
-            $("#css_sell").removeClass('down');
-            $("#css_sell").removeClass('no-change');
-            $("#css_sell").addClass('up');
+            $("#icon-gia-mua").addClass('glyphicon-arrow-up');
         } else if (obj.SwapShort < 0) {
-            $("#css_sell").removeClass('up');
-            $("#css_sell").removeClass('no-change');
-            $("#css_sell").addClass('down');
+            $("#icon-gia-mua").addClass('glyphicon-arrow-down');
         } else {
-            $("#css_sell").addClass('no-change');
+            $("#icon-gia-mua").addClass('glyphicon-resize-horizontal');
         }
 
     });

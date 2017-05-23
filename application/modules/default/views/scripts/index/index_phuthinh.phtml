@@ -1,8 +1,4 @@
-<style>
- 
 
-
-</style>
 <link href="<?php echo NHK_URL::getLinkPublic("plugin") ?>/animated_modal/css.css?t=125" media="screen" rel="stylesheet" type="text/css" />
 
 <div style="display: none;"  class="box giavang-maiquyen">
@@ -11,21 +7,19 @@
    <div style="display: none;"  class="box giangoaite-maiquyen">
       <?php //echo $this->render('index/giavangmaiquyen.phtml'); ?>
   </div>
-
 <div class="box">
-    <?php echo $this->render('index/divGiaVangCaMau.phtml'); ?>
+    <?php echo $this->render('index/divGiaVangNgoaiTe.phtml'); ?>
 </div>
 
 <div class="box">
     <?php echo $this->render('index/divGiaTheGioi.phtml'); ?>
 </div>
 
-<div class="box">
-    <?php echo $this->render('index/divGiaVangNgoaiTe.phtml'); ?>
-</div>
-
 <div class="box giavangnet">
     <?php echo $this->render('index/giavangnet.phtml'); ?>
+</div>
+<div class="box giavangnet">
+    <?php echo $this->render('index/fxstreet.phtml'); ?>
 </div>
 
 <div id="modal_login" class="modal hide fade">
@@ -68,35 +62,7 @@
     
   
 </div>
-<style>
-/*    .modal.large {
-    width: 50%;  respsonsive width 
-    margin-left:-25%;  width/2)  
-    
-}
-.modal-body{
-    max-height: 550px;
-}
-.modal.fade.in {
-    top: 37%;
-}*/
-</style>
 
-<!--<div id="modal_notification" class="modal large hide fade">
-  <div class="modal-header"> 
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Thông Báo</h3>
-  </div>
-  <div class="modal-body">
-    
-  </div>
-    
-    <div class="modal-footer">
-    <a href="#" data-dismiss="modal" aria-hidden="true" class="btn btn-danger">Đóng</a>
-    
-  </div>
-  
-</div>-->
 
 <div style="display: none;">
   <div id="modal-content-demo" class="modal-content">
@@ -122,13 +88,13 @@
         auto_get_value();
                 
         show_modal_login();
-        fix_bang_gia_ca_mau();
+       
         
 
     });
 
     init = function () {
-        getGiaVangCaMau();
+       
         displayGold();
         displayCurrence();
         displayNotification(); 
@@ -139,7 +105,7 @@
     auto_get_value = function () {
         setInterval(displayGold, 300000);       
         setInterval(displayCurrence, 400000);        
-        setInterval(getGiaVangCaMau, 300000);             
+              
         setInterval(getGiaTheGioi, 300000);
     };
     

@@ -1,0 +1,35 @@
+<style>
+    .tin-tuc dt{
+        margin-bottom: 5px;
+        color: #eee;
+    }
+    .tin-tuc a{
+        color: #FDE196;
+/*        text-decoration: underline;*/
+    }
+    .tin-tuc a:hover{
+        color: #FDE196;
+        text-decoration: underline;
+    }
+</style>
+
+<div class="box-main-header">
+    <h1 class="box-main-header-title">
+        <span class="box-main-header-title-icon">TIN TỨC NỔI BẬT</span>
+    </h1>
+
+</div>
+<div style="padding:10px;" class="box-main-content">
+
+    <dl class="tin-tuc"> 
+        <?php foreach( $this->news as $item) { ?>
+        <dt>
+            <span class="glyphicon glyphicon-star-empty"></span>
+            <a href="<?php echo NHK_URL::getLinkControllerDefault('news').'/detail/id/'.$item->id;?>"><?=$item->title?></a>
+            <i>(<?=date("d-m-Y H:i:s",strtotime($item->created_at))?>)</i>
+        </dt>
+        <?php }?>
+    </dl>
+
+</div>
+

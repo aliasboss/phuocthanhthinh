@@ -14,6 +14,8 @@ class NHK_URL {
             "js" => ROOT_URL. "/public" . "/js",
             "css" => ROOT_URL. "/public" . "/css",
             "img" => ROOT_URL. "/public" . "/img",
+            "images" => ROOT_URL. "/public" . "/images",
+            "produkta" => ROOT_URL. "/public" . "/produkta",
             "plugin" => ROOT_URL. "/public" . "/plugin",
             "jqueryUI" => ROOT_URL. "/public" . "/jqueryUI",
             "bootstrap3" => ROOT_URL. "/public" . "/bootstrap_3_3_7",

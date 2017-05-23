@@ -2,40 +2,162 @@
 body {
     min-height: 2000px;
     padding-top: 70px;
+/*    background-color: #620001;*/
+    background: #9B0810 url(../images/page.png) scroll;
+}
+
+@media (max-width: 767px)  {
+    .header-logo{
+        width: 300px;
+    }
+    .load{
+        width: 100%;
+    }
 }
 
 /* Custom container */
-.container {
 
+.navbar-default{
+    background: -moz-linear-gradient(top, rgba(98,0,1,1) 0%, rgba(122,24,2,1) 50%, rgba(88,1,2,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(98,0,1,1) 0%,rgba(122,24,2,1) 50%,rgba(88,1,2,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(98,0,1,1) 0%,rgba(122,24,2,1) 50%,rgba(88,1,2,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#620001', endColorstr='#580102',GradientType=0 ); /* IE6-9 */
+border-color: #7A1802;
 }
-.container > hr {
 
+.navbar-default .navbar-brand{
+/*    color: #FFFF00;*/
+    color: #FFF;
+}
+.navbar-default .navbar-brand:hover{
+    color: #FFFF00;
+}
+.navbar-nav li{
+/*    background-color: #880002;*/
+    
+}
+.navbar-default .navbar-nav > li > a{
+    color: #FFF;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: #FBF533;
+}
+.navbar-default .navbar-nav > .active > a{
+/*    background-color: #FBF533;
+    color: #620001;*/
+    color: #FFF;
+/*    background-color: #880002;*/
+background: #9B0810 url(../images/page.png) scroll;
+    border-radius: 5px;
+}
+.navbar-default .navbar-nav > .active > a:hover{
+    color: #FBF533;
+    background-color: #880002;
+}
+.jumbotron{
+    background-color: #500001;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.jumbotron h2,h3{
+    color: #FFF;    
 }
 
+.box-left .box-left-header{
+    background:  url(../images/bg_title_tb_R.png) no-repeat;
+    color: #FFF;
+    padding-left: 20px;
+    position: absolute;
+}
+.box-left .box-left-content{
+    border: 1px solid #5a0203;
+    border-radius: 0 3px 3px;
+    padding: 2px;
+    background: #430101;
+    margin-top: 10px;
+    padding-top: 20px;
+}
 
+.box-main-header{
+    border-bottom: 1px solid #ED0C18;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 1px;
+    margin-bottom: 5px;
+}
 
+.box-main-header-title {
+    color: #FDE196;
+    margin: 5px 0;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    
+}
+.box-main-header-title-icon:before {
+    content: url(../images/postheadericon.png);
+    margin-right: 6px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 0;
+    bottom: auto;
+}
+.box-main-content{
+    border: 1px solid #ED0C18;
+    margin-bottom: 20px;
+}
+.box-main{
+    
+}
 
 
 .box{
-    border: 1px solid #aaa;
+    border : 2px solid #ED0C18;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #FFF;
+/*    background-color: #620001;*/
+/*    background-color: #FFF;*/
+    
+    
 }
 .box-header{
+    border-color: #7A1802;
     padding: 5px;
+    padding-left: 10px;
     text-transform: uppercase;
-    border-bottom: 1px solid #aaa;
-    background-color: #ffe207;
-    color: #C80101;
-    text-shadow: 1px 1px #FDF2BE;
+/*    border: 1px solid #7A1802;*/
+    /*    background-color: #500001;*/
+    color: #000;
+/*    text-shadow: 1px 1px #FDF2BE;*/
     font-weight: bold;
+    font-size: 12px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8ffe8+0,fab905+50,fab905+50,fab905+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fab905+0,f9c32c+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9c943+0,fab905+50,f9c943+100 */
+background: rgb(249,201,67); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(249,201,67,1) 0%, rgba(250,185,5,1) 50%, rgba(249,201,67,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(249,201,67,1) 0%,rgba(250,185,5,1) 50%,rgba(249,201,67,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(249,201,67,1) 0%,rgba(250,185,5,1) 50%,rgba(249,201,67,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c943', endColorstr='#f9c943',GradientType=0 ); /* IE6-9 */
+
+
 }
 .box-content{
     padding: 5px;
+    text-align: center;
 }
+
+.header-image{
+        position: absolute;
+        right: -45px;
+        top: -5px;
+        z-index: 2;
+    }
 
 #main_1 {
     float: right;
@@ -212,13 +334,14 @@ body {
 
 }
 .footer{
-    color: #C93F3F;
+    color: #B40404;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe207+30,ffffff+100 */
-    background: rgb(255,226,7); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,226,7,1) 30%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,226,7,1) 30%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,226,7,1) 30%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe207', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+   background: rgb(249,201,67); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(249,201,67,1) 0%, rgba(250,185,5,1) 50%, rgba(249,201,67,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(249,201,67,1) 0%,rgba(250,185,5,1) 50%,rgba(249,201,67,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(249,201,67,1) 0%,rgba(250,185,5,1) 50%,rgba(249,201,67,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c943', endColorstr='#f9c943',GradientType=0 ); /* IE6-9 */
+
     border-radius: 6px;
     padding: 25px;
 }
@@ -251,12 +374,14 @@ li {
 
 
 .footer_left{
-    float: left;
-    width: 480px;
+    
+   
+}
+.footer_left dt{
+    margin-bottom: 8px;
 }
 .footer_right{
-    float: right;
-    margin-right: 15px;
+    
 }
 
 
@@ -317,7 +442,7 @@ td.loai_vang{
 
 
 /* Bảng giá vàng ngoại tệ */
-table.load td{padding:5px;border:1px solid #0746F7;text-align: left;}
+table.load td{padding:5px;border:1px solid #aaa;text-align: left;}
 .bogoc{border-bottom:rgb(255,0,0) 4px solid;border-left:rgb(255,0,0) 4px solid;
        padding-bottom:0;margin:0 auto;outline-style:none;outline-color:invert;padding-left:0;outline-width:medium;
        width:485px;padding-right:0;border-top:rgb(255,0,0) 4px solid;
@@ -330,91 +455,77 @@ table.load td{padding:5px;border:1px solid #0746F7;text-align: left;}
 .fontxanhla{font-weight:bold;color:#1F6400}
 .bogoc h2{text-align:center;color:rgb(255,0,0);font-weight:bold;margin-bottom:10px}
 .k18{background:#4747CD;font-weight:bold;color:#fff}.hidden{display:none}
-.banggiangoaite_left{
-    border: 3px solid #F00;
-    border-radius: 6px;
-    text-align: center;
-    padding: 15px;
-} 
-
-.banggiangoaite_right{
-    float: left;
-    margin-top: 40px;
-    margin-left: 20px;
-/*    border: 1px solid #000;*/
-    width: 190px;
-    height: 605px;
-}
-.ads_2{
-    border: 1px solid #f00;
-    width: 180px;
-    height: 200px;
-    font-size: 18px;
-    text-align: center;
-    color: #ddd;
-    float: left;
-
-}
+#waiting{
+        color: #FDE196;
+    }
+    .fontheader{
+        text-align: center;
+        color: #FFF;
+        background-color: #333;
+        font-weight: bold;
+        font-size: 14px;
+    }
 
 /* Bảng giá vàng ngoại tệ ----------------- */
 
 /*Bảng giá vàng thế giới */
 
+.gia-the-gioi-title{
+        /*border: 2px solid #FAB905;*/
+               
 
-.left-buy .swap-block{float:right;padding:9px 0 0 0}
-.swap-block p{color:#606a70;padding:0}
-.swap-block p em{font-style:normal;color:#ed1c24}
-.left-buy{width:100%;overflow:hidden;padding:0 0 9px;border-bottom:2px solid #d7dce0}
-.left-buy 
-.buy{font:bold 3.286em/1.043em Arial,Helvetica,sans-serif;float:left;color:#000;padding:0 30px 0 0}
-.left-buy 
-.buy_value{position:relative}
-.left-buy .down .arrow,.left-buy .up .arrow{
-    position:absolute;bottom:8px;
-    right:-30px;width:0;height:0;border-style:solid;
-    border-width:0 10.5px 15px 10.5px;border-color:transparent transparent #29a643 transparent}
-.left-buy .down .arrow{
-    border-width:15px 10.5px 0 10.5px;
-    border-color:#ed1c24 transparent transparent transparent}
-.left-buy .buy.down{color:#ed1c24}.left-buy .buy.up{color:#29a643}
-.left-buy .change{float:left;margin:21px 21px 0 14px}.left-buy .change 
-.label{font:1.571em/1.0909em Arial,Helvetica,sans-serif;color:#29a643}
-.left-buy .change .label em{font-style:normal}
-.left-buy .change.down .label em,.left-buy .change.down .label{color:#ed1c24}
+        font-weight: bold;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+        border-left: 2px solid #ED0C18;
+                border-right:  2px solid #ED0C18;
 
-.button-row{position:relative;height:54px;width:100%;margin:0 0 5px;padding:14px 0 0 0}
-.button-row a{display:block;height:100%}.button-row a:hover{text-decoration:none}
-.button-row .sell,.button-row .buy{position:relative;width:34.5%;
-                                   float:left;vertical-align:top;cursor:pointer;
-                                   font:0.857em/18px Arial,Helvetica,sans-serif;color:#fff;text-transform:uppercase;
-                                   text-align:left}.button-row .sell>span,.button-row .buy>span{padding:5px 0 4px 9px;
-                                                             display:block;background:#fff;position:relative;z-index:2}
-.button-row .buy>span{padding:5px 13px 4px 0}.button-row .buy{text-align:right;float:right}
-.button-row .up .buy_value,.button-row .up .sell_value,.button-row .up{border:1px solid #29a643;
-                                                                       color:#29a643}
-.button-row .down .buy_value,.button-row .down .sell_value,.button-row .down{border:1px solid #ed1c24;
-                                                                             color:#ed1c24}.button-row .down,.button-row .up{border-bottom:0}
-.button-row .arrow{position:absolute;background:url(../images/icons.png) -862px -272px no-repeat;
-                   width:14px;height:8px;top:9px;padding:0!important}
-.button-row .buy .arrow{left:9px}.button-row .up .arrow{background-position:-876px -272px}
-.button-row .sell .arrow{right:9px}.button-row .down .arrow{background-position:-862px -272px}
-.button-row .sell .bottom-corner{left:2px}.button-row .bg_color{background:#fff}
-.button-row .middle_col{display:inline-block;width:29%;
-                        vertical-align:top;font:1.714em/1.083em Arial,Helvetica,sans-serif;color:#5f6e76;
-                        text-align:center}
-.button-row .middle_col div{display:inline;background:none}
-.button-row .sell_value,.button-row .buy_value{background:inherit;position:absolute;top:26px;
-                                               width:140%;z-index:1;min-height:26px}.button-row .buy_value{right:-1px}
-.button-row .sell_value{left:-1px}
-.button-row .sell_value>div,.button-row .buy_value>div{position:relative;
-                                                       font:1.667em/1.1em Arial,Helvetica,sans-serif;left:8px}
-.button-row .sell_value>div .big,.button-row .buy_value>div .big{font-size:1.3em}
-.button-row .buy_value>div{right:8px;left:auto}
+                        border-top: 2px solid #ED0C18;
+        
+    }
+    .gia-the-gioi{
+        /*margin:10px 10px 0px 10px;*/
+    }
+    .gia-the-gioi2{
+        /*margin:0px 10px 0px 10px;*/
+    }
+    
+    .gia-the-gioi-title-ban{
+        padding-left: 10px;
+        color:#0040FF;
+    }
+    .gia-the-gioi-title-mua{
+        text-align: right;
+        padding-right: 10px;
+        color: #0040FF;
+    }
+    
+    .gia-the-gioi-gia{
+        border: 2px solid #ED0C18;
 
 
-
-.left-buy{padding:0 0 20px}
-
+        font-weight: bold;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #0B3B39;
+        font-size: 28px;
+        
+    }
+    .gia-the-gioi-gia-ban{
+        padding-left: 10px;
+    }
+    .gia-the-gioi-gia-mua{
+        text-align: right;
+        padding-right: 10px;
+        
+    }
+    #spread_val{
+        text-align: center;
+        color: #61210B;
+        font-size: 28px;
+        font-weight: bold;
+    }
 /*Bảng giá vàng thế giới ------------------------------- */
 
 .title-bang-gia{
@@ -426,3 +537,23 @@ table.load td{padding:5px;border:1px solid #0746F7;text-align: left;}
 .ads-main{
     margin-bottom: 3px;
 }
+
+    .block-stat ul li.online {
+
+                background: url("../img/online/online.png") 0 50% no-repeat;
+            }
+            .block-stat ul li.guest {
+                background: url("../img/online/guest.png") 0 50% no-repeat;
+            }
+            .block-stat ul li.user {
+                background: url("../img/online/user.png") 0 50% no-repeat;
+            }
+            .block-stat ul li.today {
+                background: url("../img/online/time.png") 0 50% no-repeat;
+            }
+            .block-stat ul li.month {
+                background: url("../img/online/month.png") 0 50% no-repeat;
+            }
+            .block-stat ul li.statistics {
+                background: url("../img/online/statistics.png") 0 50% no-repeat;
+            }

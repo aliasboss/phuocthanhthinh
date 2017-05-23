@@ -106,6 +106,25 @@ class News extends NHKModel{
       // exit();
         return $this->fetchRow($sql);
     }
+    
+    function getNew() {
+       
+        $sql = $this->select()->setIntegrityCheck(false)
+                        ->from(array('u' => $this->_name), array('id', 'title','created_at'))
+                        ->where("u.deleted_at is null");
+        
+       
+                $sql->order( array("u.created_at DESC") );
+         
+        
+             
+          $sql=$sql->limit(10,0);
+      
+        
+//        echo $sql;
+//        exit();
+        return $this->fetchAll($sql);
+    }
 
 }
 ?>

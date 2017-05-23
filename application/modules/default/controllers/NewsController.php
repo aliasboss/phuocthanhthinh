@@ -2,7 +2,7 @@
 class NewsController extends NHK_DefaultController{ 
     public function init(){
         //$this->require_authenticated();
-        $this->setLayout('main', 'default');
+        $this->setLayout('main_new', 'default');
         $this->view->menu = 'news';
         $this->_model = new News();
         $this->_itemPerPage = 15;
